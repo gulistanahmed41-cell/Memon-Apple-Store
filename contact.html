@@ -1,0 +1,478 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEMON APPLE iStore - Contact</title>
+    
+    
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="neon-theme">
+
+<header class="site-header">
+    <div class="header-container">
+
+        <!-- LOGO + MEMON APPLE iSTORE NAME -->
+        <a href="index.html" class="brand">
+
+            <img
+                src="images/Screenshot 2026-11-05 131459.png"
+                alt="MEMON APPLE iSTORE Logo"
+                class="brand-logo"
+            >
+
+            
+        </a>
+
+        <!-- NAVIGATION -->
+        <nav class="navigation" id="navigation">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="offers.html">New Offers</a>
+        </nav>
+
+        <!-- HEADER BUTTONS -->
+        <div class="header-actions">
+ 
+            <a href="login.html" class="login-btn">Login</a>
+
+            <a href="signup.html" class="signin-btn">Sign In</a>
+
+            <button class="menu-toggle" id="menu-toggle" type="button">
+                ☰
+            </button>
+
+        </div>
+    </div>
+   
+</header>
+
+<section class="contact-section" id="contact">
+
+    <!-- HEADING -->
+    <div class="contact-heading">
+        <small>CONTACT US</small>
+        <h2>Contact MEMON APPLE iStore</h2>
+        <p>
+            Have a question about an iPhone, MacBook, iPad or any Apple product?
+            Send us a message and our team will get back to you.
+        </p>
+    </div>
+
+    <div class="container">
+        <div class="row g-4">
+
+            <!-- CONTACT INFORMATION -->
+            <div class="col-lg-5">
+                <div class="contact-info">
+
+                    <h3>Get In Touch</h3>
+
+                    <div class="info-box">
+                        <div class="info-icon">
+                            <i class="bi bi-geo-alt-fill"></i>
+                        </div>
+                        <div>
+                            <h6>Store Address</h6>
+                            <p>Shah Latif Town, Karachi, Pakistan</p>
+                        </div>
+                    </div>
+
+                    <div class="info-box">
+                        <div class="info-icon">
+                            <i class="bi bi-telephone-fill"></i>
+                        </div>
+                        <div>
+                            <h6>Call Us</h6>
+                            <p>+92 300 1234567</p>
+                        </div>
+                    </div>
+
+                    <div class="info-box">
+                        <div class="info-icon">
+                            <i class="bi bi-envelope-fill"></i>
+                        </div>
+                        <div>
+                            <h6>Email Us</h6>
+                            <p>info@memonappleistore.com</p>
+                        </div>
+                    </div>
+
+                    <div class="info-box">
+                        <div class="info-icon">
+                            <i class="bi bi-clock-fill"></i>
+                        </div>
+                        <div>
+                            <h6>Opening Hours</h6>
+                            <p>Monday - Saturday: 10:00 AM - 9:00 PM</p>
+                        </div>
+                    </div>
+
+                    <!-- SOCIAL MEDIA -->
+                    <div class="social-title">
+                        Follow Us
+                    </div>
+
+                    <div class="social-buttons">
+
+                        <a href="https://www.facebook.com/" target="_blank" rel="noopener" title="Facebook">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+
+                        <a href="https://www.instagram.com/" target="_blank" rel="noopener" title="Instagram">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+
+                        <a href="https://wa.me/923001234567" target="_blank" rel="noopener" title="WhatsApp">
+                            <i class="bi bi-whatsapp"></i>
+                        </a>
+
+                        <a href="https://www.tiktok.com/" target="_blank" rel="noopener" title="TikTok">
+                            <i class="bi bi-tiktok"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!-- CONTACT FORM -->
+            <div class="col-lg-7">
+
+                <div class="contact-form">
+
+                    <h3>Send Us a Message</h3>
+
+                    <form id="contactForm">
+                          
+                        <input type="hidden" name="_subject"
+                               value="New Customer Message - MEMON APPLE iSTORE">
+
+                        <input type="hidden" name="_template"
+                               value="table">
+
+                        <div class="row g-3">
+
+                            <!-- NAME -->
+                            <div class="col-md-6">
+                                <label for="name" class="form-label">
+                                    Full Name *
+                                </label>
+
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    id="name"
+                                    name="name"
+                                    placeholder="Enter your name"
+                                    minlength="3"
+                                    maxlength="50"
+                                    pattern="[A-Za-z ]{3,50}"
+                                    title="Enter at least 3 letters."
+                                    required
+                                >
+
+                                <div class="invalid-feedback">
+                                    Please enter your name (minimum 3 characters).
+                                </div>
+                            </div>
+
+
+                            <!-- PHONE -->
+                            <div class="col-md-6">
+                                <label for="phone" class="form-label">
+                                    Phone Number *
+                                </label>
+
+                                <input
+                                    type="tel"
+                                    class="form-control"
+                                    id="phone"
+                                    name="phone"
+                                    placeholder="+92 300 1234567"
+                                    pattern="[+]?[0-9][0-9\s-]{8,13}[0-9]"
+                                    title="Please enter a valid phone number."
+                                    required
+                                >
+
+                                <div class="invalid-feedback">
+                                    Please enter a valid phone number.
+                                </div>
+                            </div>
+
+
+                            <!-- EMAIL -->
+                            <div class="col-md-6">
+                                <label for="email" class="form-label">
+                                    Email Address *
+                                </label>
+
+                                <input
+                                    type="email"
+                                    class="form-control"
+                                    id="email"
+                                    name="email"
+                                    placeholder="example@gmail.com"
+                                    required
+                                >
+
+                                <div class="invalid-feedback">
+                                    Please enter a valid email address.
+                                </div>
+                            </div>
+
+
+                            <!-- PRODUCT -->
+                            <div class="col-md-6">
+                                <label for="product" class="form-label">
+                                    Product *
+                                </label>
+
+                                <select
+                                    class="form-select"
+                                    id="product"
+                                    name="product"
+                                    required
+                                >
+                                    <option value="">Select Product</option>
+                                    <option value="iPhone">iPhone</option>
+                                    <option value="MacBook">MacBook</option>
+                                    <option value="iPad">iPad</option>
+                                    <option value="Apple Watch">Apple Watch</option>
+                                    <option value="AirPods">AirPods</option>
+                                    <option value="Accessories">Accessories</option>
+                                    <option value="Other">Other</option>
+                                </select>
+
+                                <div class="invalid-feedback">
+                                    Please select a product.
+                                </div>
+                            </div>
+
+
+                            <!-- MESSAGE -->
+                            <div class="col-12">
+                                <label for="message" class="form-label">
+                                    Message *
+                                </label>
+
+                                <textarea
+                                    class="form-control"
+                                    id="message"
+                                    name="message"
+                                    rows="5"
+                                    placeholder="Write your message..."
+                                    minlength="10"
+                                    maxlength="1000"
+                                    required
+                                ></textarea>
+
+                                <div class="invalid-feedback">
+                                    Please enter at least 10 characters.
+                                </div>
+                            </div>
+
+
+                            <!-- BUTTON -->
+                            <div class="col-12">
+                                <button
+                                    type="submit"
+                                    class="send-btn"
+                                >
+                                    <i class="bi bi-send-fill"></i>
+                                    Send Message
+                                </button>
+                            </div>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- LOCATION -->
+        <div class="location-box">
+
+            <div>
+                <h4>
+                    <i class="bi bi-geo-alt-fill"></i>
+                    Visit MEMON APPLE iStore
+                </h4>
+
+                <p>
+                    Come to our store and explore the latest Apple products.
+                </p>
+            </div>
+
+            <a
+                href="https://www.google.com/maps/search/?api=1&query=Shah+Latif+Town+Karachi"
+                target="_blank"
+                rel="noopener"
+                class="direction-btn"
+            >
+                <i class="bi bi-map-fill"></i>
+                Get Directions
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+<footer class="vip-footer">
+
+    <div class="footer-container">
+
+        <!-- BRAND INFORMATION -->
+        <div class="footer-column footer-brand">
+
+            <div class="footer-logo">
+                <img src="images/Screenshot 2026-11-05 131459.png"
+                     alt="MEMON APPLE iSTORE Logo"
+                     class="footer-round-logo">
+
+                
+            </div>
+
+            <p>
+                Discover premium Apple products with
+                elegant design, quality and exceptional
+                customer service.
+            </p>
+
+            <!-- SOCIAL LINKS -->
+            <div class="footer-social">
+
+                <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+
+                <a href="https://www.whatsapp.com/" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- QUICK LINKS -->
+        <div class="footer-column">
+            <h3>Quick Links</h3>
+
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="offers.html">New Offers</a></li>
+           
+            </ul>
+        </div>
+
+
+        <!-- PRODUCTS -->
+        <div class="footer-column">
+            <h3>Our Products</h3>
+
+            <ul>
+                <li><a href="iphones.html">iPhone</a></li>
+                <li><a href="macbooks.html">MacBook</a></li>
+                <li><a href="ipads.html">iPad</a></li>
+                <li><a href="watches.html">Apple Watch</a></li>
+                <li><a href="airpods.html">AirPods</a></li>
+                <li><a href="accessories.html">Accessories</a></li>
+            </ul>
+        </div>
+
+
+        <!-- CUSTOMER SUPPORT -->
+        <div class="footer-column">
+            <h3>Customer Support</h3>
+
+            <ul>
+                <li><a href="Privacy Policy.html">Privacy Policy</a></li>
+
+                <li><a href="Terms and Conditions.html">Terms and Conditions</a></li>
+              
+                <li><a href="Refund and Returns.html">Refund and Returns</a></li>
+
+                <li><a href="login.html">My Account</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+
+    <!-- NEWSLETTER -->
+    <div class="footer-newsletter">
+
+        <div>
+            <h3>Stay Connected With Us</h3>
+            <p>Subscribe for updates about our latest collections.</p>
+        </div>
+
+        <form class="newsletter-form" id="newsletterForm">
+            <input type="email"
+                   placeholder="Enter your email address"
+                   required>
+
+            <button type="submit">Subscribe</button>
+        </form>
+
+    </div>
+
+
+    <!-- FOOTER BOTTOM -->
+    <div class="footer-bottom">
+
+        <p>
+            © <span id="footerYear"></span>
+            MEMON APPLE iSTORE. All Rights Reserved.
+        </p>
+
+        <div class="footer-bottom-links">
+            <a href="Privacy Policy.html">Privacy Policy</a>
+            <a href="Shipping Policy.html">Shipping Policy</a>
+
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <button id="backToTop" class="back-to-top"
+                aria-label="Back to top">
+            <i class="fa-solid fa-arrow-up"></i>
+        </button>
+
+    </div>
+
+</footer>
+<script src="Asserts/js/script.js"></script>
+
+</body>
+</html>

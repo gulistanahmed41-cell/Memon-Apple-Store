@@ -1,0 +1,1547 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f5f5f7">
+    <title>MacBook Collection | MEMON APPLE iSTORE</title>
+    
+    
+    
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f5f5f7;
+            color: #222;
+        }
+
+        /* HEADER - SAME DESIGN AS IPHONE / IPAD PAGE */
+        .navbar {
+            background: #ffffffd9;
+            backdrop-filter: blur(15px);
+            box-shadow: 0 3px 20px #00000008;
+            padding: 18px 5%;
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+            letter-spacing: 1px;
+            color: #222;
+        }
+
+        .nav-link {
+            color: #444;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .nav-link:hover {
+            color: #999;
+        }
+
+        .cart {
+            border: 1px solid #ddd;
+            padding: 9px 16px;
+            border-radius: 25px;
+            color: #222;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        /* HERO */
+        .hero {
+            padding: 85px 20px;
+            text-align: center;
+            background: linear-gradient(135deg, #fff, #e8e8ec, #fdfdfd);
+        }
+
+        .hero h1 {
+            font-size: 52px;
+            font-weight: 800;
+            letter-spacing: -2px;
+        }
+
+        .hero p {
+            color: #777;
+            font-size: 17px;
+            margin-top: 15px;
+        }
+
+        .hero span {
+            color: #999;
+        }
+
+        .search-box {
+            max-width: 550px;
+            margin: 35px auto 0;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 16px 22px;
+            border: 1px solid #ddd;
+            border-radius: 30px;
+            outline: none;
+            background: white;
+        }
+
+        /* PRODUCTS */
+        .products-section {
+            padding: 65px 5%;
+        }
+
+        .section-heading {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .section-heading h2 {
+            font-size: 35px;
+            font-weight: 800;
+        }
+
+        .section-heading p {
+            color: #888;
+        }
+
+        .filters {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .filter-btn {
+            border: 1px solid #ddd;
+            background: white;
+            padding: 10px 22px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: .3s;
+        }
+
+        .filter-btn.active,
+        .filter-btn:hover {
+            background: #222;
+            color: white;
+        }
+
+        .year-filter {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+
+        .year-filter select {
+            padding: 10px 18px;
+            border-radius: 25px;
+            border: 1px solid #ddd;
+            background: white;
+            outline: none;
+            cursor: pointer;
+        }
+
+        .result-count {
+            text-align: center;
+            color: #888;
+            font-size: 13px;
+            margin-bottom: 25px;
+        }
+
+        /* PRODUCT CARD */
+        .product-card {
+            position: relative;
+            background: linear-gradient(145deg, #fff, #f1f2f5);
+            border: 1px solid #e6e6e6;
+            border-radius: 24px;
+            padding: 20px;
+            text-align: center;
+            height: 100%;
+            transition: .35s;
+            box-shadow: 0 8px 25px #00000008;
+        }
+
+        .product-card:hover {
+            transform: translateY(-9px);
+            box-shadow: 0 18px 40px #00000015;
+        }
+
+        .product-badge {
+            display: inline-block;
+            background: #222;
+            color: white;
+            padding: 6px 13px;
+            border-radius: 20px;
+            font-size: 11px;
+            margin-bottom: 13px;
+        }
+
+        .product-badge.preorder {
+            background: #9b6b17;
+        }
+
+        .product-image {
+            height: 220px;
+            background: linear-gradient(145deg, #f9f9fb, #e6e6eb);
+            border-radius: 18px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: center;
+            padding: 15px;
+            transition: .4s;
+        }
+
+        .product-card:hover .product-image img {
+            transform: scale(1.07);
+        }
+
+        .product-card h3 {
+            font-size: 19px;
+            font-weight: 700;
+        }
+
+        .product-card>p {
+            color: #888;
+            font-size: 13px;
+        }
+
+        .price {
+            font-size: 16px;
+            font-weight: bold;
+            margin: 15px 0;
+            color: #222;
+        }
+
+        .card-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 9px;
+        }
+
+        .add-btn {
+            width: 100%;
+            border: 0;
+            background: #222;
+            color: white;
+            padding: 13px;
+            border-radius: 12px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: .3s;
+        }
+
+        .add-btn:hover {
+            background: #555;
+        }
+
+        .details-btn {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            background: white;
+            color: #222;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .details-btn:hover {
+            background: #e9e9ed;
+        }
+
+        .no-results {
+            display: none;
+            text-align: center;
+            color: #777;
+            padding: 35px;
+            width: 100%;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #171717;
+            color: white;
+            text-align: center;
+            padding: 35px 15px;
+        }
+
+        footer p {
+            color: #aaa;
+            font-size: 13px;
+            margin: 8px 0 0;
+        }
+
+        /* MOBILE */
+        @media(max-width:600px) {
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero {
+                padding: 60px 15px;
+            }
+
+            .section-heading h2 {
+                font-size: 28px;
+            }
+
+            .product-image {
+                height: 200px;
+            }
+        }
+
+        .live-note {
+            font-size: 12px;
+            color: #777;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- HEADER - SAME DESIGN AS IPHONE / IPAD PAGE -->
+   <body class="neon-theme">
+
+<header class="site-header">
+    <div class="header-container">
+
+        <!-- LOGO + MEMON APPLE iSTORE NAME -->
+        <a href="index.html" class="brand">
+
+            <img
+                src="images/Screenshot 2026-11-05 131459.png"
+                alt="MEMON APPLE iSTORE Logo"
+                class="brand-logo"
+            >
+
+           
+
+        </a>
+
+        <!-- NAVIGATION -->
+        <nav class="navigation" id="navigation">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="offers.html">New Offers</a>
+        </nav>
+
+        <!-- HEADER BUTTONS -->
+        <div class="header-actions">
+ 
+            <a href="login.html" class="login-btn">Login</a>
+
+            <a href="signup.html" class="signin-btn">Sign In</a>
+
+            <button class="menu-toggle" id="menu-toggle" type="button">
+                ☰
+            </button>
+
+        </div>
+    </div>
+   
+</header>
+ 
+
+    <!-- HERO -->
+    <section class="hero">
+        <h1>MacBook Collection</h1>
+        <p>Explore Apple MacBook Neo, MacBook Air and MacBook Pro models.</p>
+        <p class="small text-muted">Live product photos load from the internet.</p>
+        <p><span>Premium Design • Powerful Performance • Apple Experience</span></p>
+        <div class="search-box">
+            <input type="text" id="searchInput"
+                placeholder="Search your favourite MacBook... (e.g. Air M5, Pro M4, Neo)"
+                aria-label="Search MacBook models">
+        </div>
+        <div class="live-note">Internet connection is required to load product photos. Older model cards may use a
+            representative family photo.</div>
+    </section>
+
+    <!-- PRODUCTS -->
+    <section class="products-section">
+        <div class="section-heading">
+            <h2>Explore MacBooks</h2>
+            <p>MacBook models across Neo, Air and Pro families (2017–2026)</p>
+        </div>
+        <div class="filters">
+            <button class="filter-btn active" onclick="filterCategory('all', this)">All MacBooks</button>
+            <button class="filter-btn" onclick="filterCategory('neo', this)">MacBook Neo</button>
+            <button class="filter-btn" onclick="filterCategory('air', this)">MacBook Air</button>
+            <button class="filter-btn" onclick="filterCategory('pro', this)">MacBook Pro</button>
+        </div>
+        <div class="year-filter">
+            <label for="yearSelect"><strong>Year:</strong></label>
+            <select id="yearSelect" onchange="applyFilters()">
+                <option value="all">All Years (2017 - 2026)</option>
+                <option value="2026">2026</option>
+                <option value="2025">2025</option>
+                <option value="2024">2024</option>
+                <option value="2023">2023</option>
+                <option value="2022">2022</option>
+                <option value="2021">2021</option>
+                <option value="2020">2020</option>
+                <option value="2019">2019</option>
+                <option value="2017">2017</option>
+            </select>
+        </div>
+        <div class="result-count" id="resultCount">Showing 35 of 35 MacBook model(s)</div>
+        <div class="container-fluid">
+            <div class="row g-4" id="productList">
+                <div class="col-lg-3 col-md-6 product" data-category="neo" data-year="2026"
+                    data-name="macbook neo (a18 pro)" style="display: block;">
+                    <div class="product-card">
+                        <span class="product-badge">2026 Model</span>
+                        <div class="product-image">
+                            <img src="https://www.maccenter.vn/App_Images/MacBookNeo-Citrus.jpg"
+                                alt="MacBook Neo (A18 Pro) product photo" loading="lazy" referrerpolicy="no-referrer"
+                                onerror="usePhotoFallback(this, 'neo')">
+                        </div>
+                        <h3>MacBook Neo (A18 Pro)</h3>
+                        <p>Apple MacBook NEO • Introduced 2026</p>
+                        <div class="price">Price on Request</div>
+                        <div class="card-buttons">
+                            <button class="add-btn" type="button" data-add="MacBook Neo (A18 Pro)">ADD TO CART
+                                +</button>
+                            <button class="details-btn" type="button" data-details="MacBook Neo (A18 Pro)">VIEW
+                                DETAILS</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 product" data-category="air" data-year="2026"
+                    data-name="macbook air 13-inch (m5)" style="display: block;">
+                    <div class="product-card">
+                        <span class="product-badge">2026 Model</span>
+                        <div class="product-image">
+                            <img src="https://dam.elcorteingles.es/producto/www-001015215426709-00.jpg"
+                                alt="MacBook Air 13-inch (M5) product photo" loading="lazy" referrerpolicy="no-referrer"
+                                onerror="usePhotoFallback(this, 'air')">
+                        </div>
+                        <h3>MacBook Air 13-inch (M5)</h3>
+                        <p>Apple MacBook AIR • Introduced 2026</p>
+                        <div class="price">Price on Request</div>
+                        <div class="card-buttons">
+                            <button class="add-btn" type="button" data-add="MacBook Air 13-inch (M5)">ADD TO CART
+                                +</button>
+                            <button class="details-btn" type="button" data-details="MacBook Air 13-inch (M5)">VIEW
+                                DETAILS</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 product" data-category="air" data-year="2026"
+                    data-name="macbook air 15-inch (m5)" style="display: block;">
+                    <div class="product-card">
+                        <span class="product-badge">2026 Model</span>
+                        <div class="product-image">
+                            <img src="https://dam.elcorteingles.es/producto/www-001015215426709-00.jpg"
+                                alt="MacBook Air 15-inch (M5) product photo" loading="lazy" referrerpolicy="no-referrer"
+                                onerror="usePhotoFallback(this, 'air')">
+                        </div>
+                        <h3>MacBook Air 15-inch (M5)</h3>
+                        <p>Apple MacBook AIR • Introduced 2026</p>
+                        <div class="price">Price on Request</div>
+                        <div class="card-buttons">
+                            <button class="add-btn" type="button" data-add="MacBook Air 15-inch (M5)">ADD TO CART
+                                +</button>
+                            <button class="details-btn" type="button" data-details="MacBook Air 15-inch (M5)">VIEW
+                                DETAILS</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 product" data-category="air" data-year="2025"
+                    data-name="macbook air 13-inch (m4)" style="display: block;">
+                    <div class="product-card">
+                        <span class="product-badge">2025 Model</span>
+                        <div class="product-image">
+                            <img src="https://bizweb.dktcdn.net/100/459/953/products/macbook-air-m4-silver-reseller.jpg?v=1761100787753"
+                                alt="MacBook Air 13-inch (M4) product photo" loading="lazy" referrerpolicy="no-referrer"
+                                onerror="usePhotoFallback(this, 'air')">
+                        </div>
+                        <h3>MacBook Air 13-inch (M4)</h3>
+                        <p>Apple MacBook AIR • Introduced 2025</p>
+                        <div class="price">Price on Request</div>
+                        <div class="card-buttons">
+                            <button class="add-btn" type="button" data-add="MacBook Air 13-inch (M4)">ADD TO CART
+                                +</button>
+                            <button class="details-btn" type="button" data-details="MacBook Air 13-inch (M4)">VIEW
+                                DETAILS</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 product" data-category="air" data-year="2025"
+                    data-name="macbook air 15-inch (m4)" style="display: block;">
+                    <div class="product-card">
+                        <span class="product-badge">2025 Model</span>
+                        <div class="product-image">
+                            <img src="https://bizweb.dktcdn.net/100/459/953/products/macbook-air-m4-silver-reseller.jpg?v=1761100787753"
+                                alt="MacBook Air 15-inch (M4) product photo" loading="lazy" referrerpolicy="no-referrer"
+                                onerror="usePhotoFallback(this, 'air')">
+                        </div>
+                        <h3>MacBook Air 15-inch (M4)</h3>
+                        <p>Apple MacBook AIR • Introduced 2025</p>
+                        <div class="price">Price on Request</div>
+                        <div class="card-buttons">
+                            <button class="add-btn" type="button" data-add="MacBook Air 15-inch (M4)">ADD TO CART
+                                +</button>
+                            <button class="details-btn" type="button" data-details="MacBook Air 15-inch (M4)">VIEW
+                                DETAILS</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 product" data-category="air" data-year="2024"
+                    data-name="macbook air 13-inch (m3)" style="display: block;">
+                    <div class="product-card">
+                        <span class="product-badge">2024 Model</span>
+                        <div class="product-image">
+                            <img src="https://product.hstatic.net/200000763869/product/screenshot_2024-05-22_at_17.43.02_5c02c76d0b0546bb98a4e3379783e30e_master.png"
+                                alt="MacBook Air 13-inch (M3) product photo" loading="lazy" referrerpolicy="no-referrer"
+                                onerror="usePhotoFallback(this, 'air')">
+                        </div>
+                        <h3>MacBook Air 13-inch (M3)</h3>
+                        <p>Apple MacBook AIR • Introduced 2024</p>
+                        <div class="price">Price on Request</div>
+                        <div class="card-buttons">
+                            <button class="add-btn" type="button" data-add="MacBook Air 13-inch (M3)">ADD TO CART
+                                +</button>
+                            <button class="details-btn" type="button" data-details="MacBook Air 13-inch (M3)">VIEW
+                                DETAILS</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 product" data-category="air" data-year="2024"
+                    data-name="macbook air 15-inch (m3)" style="display: block;">
+                    <div class="product-card">
+                        <span class="product-badge">2024 Model</span>
+                        <div class="product-image">
+                            <img src="https://product.hstatic.net/200000763869/product/screenshot_2024-05-22_at_17.43.02_5c02c76d0b0546bb98a4e3379783e30e_master.png"
+                                alt="MacBook Air 15-inch (M3) product photo" loading="lazy" referrerpolicy="no-referrer"
+                                onerror="usePhotoFallback(this, 'air')">
+                        </div>
+                        <h3>MacBook Air 15-inch (M3)</h3>
+                        <p>Apple MacBook AIR • Introduced 2024</p>
+                        <div class="price">Price on Request</div>
+                        <div class="card-buttons">
+                            <button class="add-btn" type="button" data-add="MacBook Air 15-inch (M3)">ADD TO CART
+                                +</button>
+                            <button class="details-btn" type="button" data-details="MacBook Air 15-inch (M3)">VIEW
+                                DETAILS</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 product" data-category="air" data-year="2022"
+                    data-name="macbook air 13-inch (m2)" style="display: block;">
+                    <div class="product-card">
+                        <span class="product-badge">2022 Model</span>
+                        <div class="product-image">
+                            <img src="https://tekreplay.com/cdn/shop/files/bc56f38a-e720-4b77-94d6-c65457583b77.jpg?v=1734551222"
+                                alt="MacBook Air 13-inch (M2) product photo" loading="lazy" referrerpolicy="no-referrer"
+                                onerror="usePhotoFallback(this, 'air')">
+                        </div>
+                        <h3>MacBook Air 13-inch (M2)</h3>
+                        <p>Apple MacBook AIR • Introduced 2022</p>
+                        <div class="price">Price on Request</div>
+                        <div class="card-buttons">
+                            <button class="add-btn" type="button" data-add="MacBook Air 13-inch (M2)">ADD TO CART
+                                +</button>
+                            <button class="details-btn" type="button" data-details="MacBook Air 13-inch (M2)">VIEW
+                                DETAILS</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 product" data-category="air" data-year="2023"
+                    data-name="macbook air 15-inch (m2)" style="display: block;">
+                    <div class="product-card">
+                        <span class="product-badge">2023 Model</span>
+                        <div class="product-image">
+                            <img src="https://tekreplay.com/cdn/shop/files/bc56f38a-e720-4b77-94d6-c65457583b77.jpg?v=1734551222"
+                                alt="MacBook Air 15-inch (M2) product photo" loading="lazy" referrerpolicy="no-referrer"
+                                onerror="usePhotoFallback(this, 'air')">
+                        </div>
+                        <h3>MacBook Air 15-inch (M2)</h3>
+                        <p>Apple MacBook AIR • Introduced 2023</p>
+                        <div class="price">Price on Request</div>
+                        <div class="card-buttons">
+                            <button class="add-btn" type="button" data-add="MacBook Air 15-inch (M2)">ADD TO CART
+                                +</button>
+                            <button class="details-btn" type="button" data-details="MacBook Air 15-inch (M2)">VIEW
+                                DETAILS</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 product" data-category="air" data-year="2020"
+                    data-name="macbook air 13-inch (m1)" style="display: block;">
+                    <div class="product-card">
+                        <span class="product-badge">2020 Model</span>
+                        <div class="product-image">
+                            <img src="https://i5.walmartimages.com/seo/Pre-Owned-2020-Apple-MacBook-Air-13-Inch-Silver-1-1GHz-i3-8GB-RAM-256GB-SSD-Fair_9fb6469d-729a-4a6a-b36e-c4bbb3b313d3.8df856c504b861eeaeec27018776b3cb.jpeg"
+                                alt="MacBook Air 13-inch (M1) product photo" loading="lazy" referrerpolicy="no-referrer"
+                                onerror="usePhotoFallback(this, 'air')">
+                        </div>
+                        <h3>MacBook Air 13-inch (M1)</h3>
+                        <p>Apple MacBook AIR • Introduced 2020</p>
+                        <div class="price">Price on Request</div>
+                        <div class="card-buttons">
+                            <button class="add-btn" type="button" data-add="MacBook Air 13-inch (M1)">ADD TO CART
+                                +</button/>
+                            <button class="details-btn" type="button" data-details="MacBook Air 13-inch (M1)">VIEW
+                                DETAILS</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 product" data-category="air" data-year="2020"
+                    data-name="macbook air (intel, 2020)" style="display: block;">
+                    <div class="product-card">
+                        <span class="product-badge">2020 Model</span>
+                        <div class="product-image">
+                            <img src="https://i5.walmartimages.com/seo/Pre-Owned-2020-Apple-MacBook-Air-13-Inch-Silver-1-1GHz-i3-8GB-RAM-256GB-SSD-Fair_9fb6469d-729a-4a6a-b36e-c4bbb3b313d3.8df856c504b861eeaeec27018776b3cb.jpeg"
+                                alt="MacBook Air (Intel, 2020) product photo" loading="lazy"
+                                referrerpolicy="no-referrer" onerror="usePhotoFallback(this, 'air')">
+                        </div>
+                        <h3>MacBook Air (Intel, 2020)</h3>
+                        <p>Apple MacBook AIR • Introduced 2020</p>
+                        <div class="price">Price on Request</div>
+                        <div class="card-buttons">
+                            <button class="add-btn" type="button" data-add="MacBook Air (Intel, 2020)">ADD TO CART
+                                +</button>
+                            <button class="details-btn" type="button" data-details="MacBook Air (Intel, 2020)">VIEW
+                                DETAILS</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 product" data-category="air" data-year="2017"
+                    data-name="macbook air (intel, 2017)" style="display: block;">
+                    <div class="product-card">
+                        <span class="product-badge">2017 Model</span>
+                        <div class="product-image">
+                            <img src="https://i5.walmartimages.com/seo/Apple-MacBook-Air-MQD32LL-A-Mid-2017-13-3-inch-Silver-Intel-Core-i7-5650U-2-2GHz-8GB-RAM-256GB-SSD-Scratch-and-Dent_3cd3bc64-be7e-4e56-8c44-a169abd8e98d.eb4fa387b04ba63f61110246c235352e.jpeg"
+                                alt="MacBook Air (Intel, 2017) product photo" loading="lazy"
+                                referrerpolicy="no-referrer" onerror="usePhotoFallback(this, 'air')">
+                        </div>
+                        <h3>MacBook Air (Intel, 2017)</h3>
+                        <p>Apple MacBook AIR • Introduced 2017</p>
+                        <div class="price">Price on Request</div>
+                        <div class="card-buttons">
+                            <button class="add-btn" type="button" data-add="MacBook Air (Intel, 2017)">ADD TO CART
+                                +</button>
+                            <button class="details-btn" type="button" data-details="MacBook Air (Intel, 2017)">VIEW
+                                DETAILS</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 product" data-category="pro" data-year="2026"
+                    data-name="macbook pro 14-inch (m6)" style="display: block;">
+                    <div class="product-card">
+                        <span class="product-badge preorder">Pre-Order • Launch Nov 6, 2026</span>
+                        <div class="product-image">
+                            <img src="https://dam.elcorteingles.es/producto/www-001015215426550-00.jpg"
+                                alt="MacBook Pro 14-inch (M6) product photo" loading="lazy" referrerpolicy="no-referrer"
+                                onerror="usePhotoFallback(this, 'pro')">
+                        </div>
+                        <h3>MacBook Pro 14-inch (M6)</h3>
+                        <p>Pre-order listing • expected availability Nov 6, 2026</p>
+                        <div class="price">Price on Request</div>
+                        <div class="card-buttons">
+                            <button class="add-btn" type="button" data-add="MacBook Pro 14-inch (M6)">ADD TO CART
+                                +</button>
+                            <button class="details-btn" type="button" data-details="MacBook Pro 14-inch (M6)">VIEW
+                                DETAILS</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 product" data-category="pro" data-year="2026"
+                    data-name="macbook pro 14-inch (m5 pro)" style="display: block;">
+                    <div class="product-card">
+                        <span class="product-badge">2026 Model</span>
+                        <div class="product-image">
+                            <img src="https://dam.elcorteingles.es/producto/www-001015215426550-00.jpg"
+                                alt="MacBook Pro 14-inch (M5 Pro) product photo" loading="lazy"
+                                referrerpolicy="no-referrer" onerror="usePhotoFallback(this, 'pro')">
+                        </div>
+                        <h3>MacBook Pro 14-inch (M5 Pro)</h3>
+                        <p>Apple MacBook PRO • Introduced 2026</p>
+                        <div class="price">Price on Request</div>
+                        <div class="card-buttons">
+                            <button class="add-btn" type="button" data-add="MacBook Pro 14-inch (M5 Pro)">ADD TO CART
+                                +</button>
+                            <button class="details-btn" type="button" data-details="MacBook Pro 14-inch (M5 Pro)">VIEW
+                                DETAILS</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 product" data-category="pro" data-year="2026"
+                    data-name="macbook pro 14-inch (m5 max)" style="display: block;">
+                    <div class="product-card">
+                        <span class="product-badge">2026 Model</span>
+                        <div class="product-image">
+                            <img src="https://dam.elcorteingles.es/producto/www-001015215426550-00.jpg"
+                                alt="MacBook Pro 14-inch (M5 Max) product photo" loading="lazy"
+                                referrerpolicy="no-referrer" onerror="usePhotoFallback(this, 'pro')">
+                        </div>
+                        <h3>MacBook Pro 14-inch (M5 Max)</h3>
+                        <p>Apple MacBook PRO • Introduced 2026</p>
+                        <div class="price">Price on Request</div>
+                        <div class="card-buttons">
+                            <button class="add-btn" type="button" data-add="MacBook Pro 14-inch (M5 Max)">ADD TO CART
+                                +</button>
+                            <button class="details-btn" type="button" data-details="MacBook Pro 14-inch (M5 Max)">VIEW
+                                DETAILS</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 product" data-category="pro" data-year="2026"
+                    data-name="macbook pro 16-inch (m5 pro)" style="display: block;">
+                    <div class="product-card">
+                        <span class="product-badge">2026 Model</span>
+                        <div class="product-image">
+                            <img src="https://dam.elcorteingles.es/producto/www-001015215426550-00.jpg"
+                                alt="MacBook Pro 16-inch (M5 Pro) product photo" loading="lazy"
+                                referrerpolicy="no-referrer" onerror="usePhotoFallback(this, 'pro')"
+                                data-fallback-used="yes">
+                        </div>
+                        <h3>MacBook Pro 16-inch (M5 Pro)</h3>
+                        <p>Apple MacBook PRO • Introduced 2026</p>
+                        <div class="price">Price on Request</div>
+                        <div class="card-buttons">
+                            <button class="add-btn" type="button" data-add="MacBook Pro 16-inch (M5 Pro)">ADD TO CART
+                                +</button>
+                            <button class="details-btn" type="button" data-details="MacBook Pro 16-inch (M5 Pro)">VIEW
+                                DETAILS</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 product" data-category="pro" data-year="2026"
+                    data-name="macbook pro 16-inch (m5 max)" style="display: block;">
+                    <div class="product-card">
+                        <span class="product-badge">2026 Model</span>
+                        <div class="product-image">
+                            <img src="https://dam.elcorteingles.es/producto/www-001015215426550-00.jpg"
+                                alt="MacBook Pro 16-inch (M5 Max) product photo" loading="lazy"
+                                referrerpolicy="no-referrer" onerror="usePhotoFallback(this, 'pro')"
+                                data-fallback-used="yes">
+                        </div>
+                        <h3>MacBook Pro 16-inch (M5 Max)</h3>
+                        <p>Apple MacBook PRO • Introduced 2026</p>
+                        <div class="price">Price on Request</div>
+                        <div class="card-buttons">
+                            <button class="add-btn" type="button" data-add="MacBook Pro 16-inch (M5 Max)">ADD TO CART
+                                +</button>
+                            <button class="details-btn" type="button" data-details="MacBook Pro 16-inch (M5 Max)">VIEW
+                                DETAILS</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 product" data-category="pro" data-year="2025"
+                    data-name="macbook pro 14-inch (m5)" style="display: block;">
+                    <div class="product-card">
+                        <span class="product-badge">2025 Model</span>
+                        <div class="product-image">
+                            <img src="https://dam.elcorteingles.es/producto/www-001015215426550-00.jpg"
+                                alt="MacBook Pro 14-inch (M5) product photo" loading="lazy" referrerpolicy="no-referrer"
+                                onerror="usePhotoFallback(this, 'pro')">
+                        </div>
+                        <h3>MacBook Pro 14-inch (M5)</h3>
+                        <p>Apple MacBook PRO • Introduced 2025</p>
+                        <div class="price">Price on Request</div>
+                        <div class="card-buttons">
+                            <button class="add-btn" type="button" data-add="MacBook Pro 14-inch (M5)">ADD TO CART
+                                +</button>
+                            <button class="details-btn" type="button" data-details="MacBook Pro 14-inch (M5)">VIEW
+                                DETAILS</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 product" data-category="pro" data-year="2024"
+                    data-name="macbook pro 14-inch (m4 pro)" style="display: block;">
+                    <div class="product-card">
+                        <span class="product-badge">2024 Model</span>
+                        <div class="product-image">
+                            <img src="https://assets.umart.com.au/newsite/images/202504/source_img/Apple-MacBook-Pro-Apple-14in-MacBook-Pro-Apple-M4-Chip-10-Core-CPU-10-Core-GPU-1TB-SSD-16GB-RAM-Silver-MW2X3X-A-4.jpg"
+                                alt="MacBook Pro 14-inch (M4 Pro) product photo" loading="lazy"
+                                referrerpolicy="no-referrer" onerror="usePhotoFallback(this, 'pro')">
+                        </div>
+                        <h3>MacBook Pro 14-inch (M4 Pro)</h3>
+                        <p>Apple MacBook PRO • Introduced 2024</p>
+                        <div class="price">Price on Request</div>
+                        <div class="card-buttons">
+                            <button class="add-btn" type="button" data-add="MacBook Pro 14-inch (M4 Pro)">ADD TO CART
+                                +</button>
+                            <button class="details-btn" type="button" data-details="MacBook Pro 14-inch (M4 Pro)">VIEW
+                                DETAILS</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 product" data-category="pro" data-year="2024"
+                    data-name="macbook pro 14-inch (m4 max)" style="display: block;">
+                    <div class="product-card">
+                        <span class="product-badge">2024 Model</span>
+                        <div class="product-image">
+                            <img src="https://assets.umart.com.au/newsite/images/202504/source_img/Apple-MacBook-Pro-Apple-14in-MacBook-Pro-Apple-M4-Chip-10-Core-CPU-10-Core-GPU-1TB-SSD-16GB-RAM-Silver-MW2X3X-A-4.jpg"
+                                alt="MacBook Pro 14-inch (M4 Max) product photo" loading="lazy"
+                                referrerpolicy="no-referrer" onerror="usePhotoFallback(this, 'pro')">
+                        </div>
+                        <h3>MacBook Pro 14-inch (M4 Max)</h3>
+                        <p>Apple MacBook PRO • Introduced 2024</p>
+                        <div class="price">Price on Request</div>
+                        <div class="card-buttons">
+                            <button class="add-btn" type="button" data-add="MacBook Pro 14-inch (M4 Max)">ADD TO CART
+                                +</button>
+                            <button class="details-btn" type="button" data-details="MacBook Pro 14-inch (M4 Max)">VIEW
+                                DETAILS</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 product" data-category="pro" data-year="2024"
+                    data-name="macbook pro 16-inch (m4 pro)" style="display: block;">
+                    <div class="product-card">
+                        <span class="product-badge">2024 Model</span>
+                        <div class="product-image">
+                            <img src="https://dam.elcorteingles.es/producto/www-001015215426550-00.jpg"
+                                alt="MacBook Pro 16-inch (M4 Pro) product photo" loading="lazy"
+                                referrerpolicy="no-referrer" onerror="usePhotoFallback(this, 'pro')"
+                                data-fallback-used="yes">
+                        </div>
+                        <h3>MacBook Pro 16-inch (M4 Pro)</h3>
+                        <p>Apple MacBook PRO • Introduced 2024</p>
+                        <div class="price">Price on Request</div>
+                        <div class="card-buttons">
+                            <button class="add-btn" type="button" data-add="MacBook Pro 16-inch (M4 Pro)">ADD TO CART
+                                +</button>
+                            <button class="details-btn" type="button" data-details="MacBook Pro 16-inch (M4 Pro)">VIEW
+                                DETAILS</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 product" data-category="pro" data-year="2024"
+                    data-name="macbook pro 16-inch (m4 max)" style="display: block;">
+                    <div class="product-card">
+                        <span class="product-badge">2024 Model</span>
+                        <div class="product-image">
+                            <img src="https://dam.elcorteingles.es/producto/www-001015215426550-00.jpg"
+                                alt="MacBook Pro 16-inch (M4 Max) product photo" loading="lazy"
+                                referrerpolicy="no-referrer" onerror="usePhotoFallback(this, 'pro')"
+                                data-fallback-used="yes">
+                        </div>
+                        <h3>MacBook Pro 16-inch (M4 Max)</h3>
+                        <p>Apple MacBook PRO • Introduced 2024</p>
+                        <div class="price">Price on Request</div>
+                        <div class="card-buttons">
+                            <button class="add-btn" type="button" data-add="MacBook Pro 16-inch (M4 Max)">ADD TO CART
+                                +</button>
+                            <button class="details-btn" type="button" data-details="MacBook Pro 16-inch (M4 Max)">VIEW
+                                DETAILS</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 product" data-category="pro" data-year="2024"
+                    data-name="macbook pro 14-inch (m4)" style="display: block;">
+                    <div class="product-card">
+                        <span class="product-badge">2024 Model</span>
+                        <div class="product-image">
+                            <img src="https://assets.umart.com.au/newsite/images/202504/source_img/Apple-MacBook-Pro-Apple-14in-MacBook-Pro-Apple-M4-Chip-10-Core-CPU-10-Core-GPU-1TB-SSD-16GB-RAM-Silver-MW2X3X-A-4.jpg"
+                                alt="MacBook Pro 14-inch (M4) product photo" loading="lazy" referrerpolicy="no-referrer"
+                                onerror="usePhotoFallback(this, 'pro')">
+                        </div>
+                        <h3>MacBook Pro 14-inch (M4)</h3>
+                        <p>Apple MacBook PRO • Introduced 2024</p>
+                        <div class="price">Price on Request</div>
+                        <div class="card-buttons">
+                            <button class="add-btn" type="button" data-add="MacBook Pro 14-inch (M4)">ADD TO CART
+                                +</button>
+                            <button class="details-btn" type="button" data-details="MacBook Pro 14-inch (M4)">VIEW
+                                DETAILS</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 product" data-category="pro" data-year="2023"
+                    data-name="macbook pro 14-inch (m3)" style="display: block;">
+                    <div class="product-card">
+                        <span class="product-badge">2023 Model</span>
+                        <div class="product-image">
+                            <img src="https://assets.umart.com.au/newsite/images/202504/source_img/Apple-MacBook-Pro-Apple-14in-MacBook-Pro-Apple-M4-Chip-10-Core-CPU-10-Core-GPU-1TB-SSD-16GB-RAM-Silver-MW2X3X-A-4.jpg"
+                                alt="MacBook Pro 14-inch (M3) product photo" loading="lazy" referrerpolicy="no-referrer"
+                                onerror="usePhotoFallback(this, 'pro')">
+                        </div>
+                        <h3>MacBook Pro 14-inch (M3)</h3>
+                        <p>Apple MacBook PRO • Introduced 2023</p>
+                        <div class="price">Price on Request</div>
+                        <div class="card-buttons">
+                            <button class="add-btn" type="button" data-add="MacBook Pro 14-inch (M3)">ADD TO CART
+                                +</button>
+                            <button class="details-btn" type="button" data-details="MacBook Pro 14-inch (M3)">VIEW
+                                DETAILS</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 product" data-category="pro" data-year="2023"
+                    data-name="macbook pro 14-inch (m3 pro or m3 max)" style="display: block;">
+                    <div class="product-card">
+                        <span class="product-badge">2023 Model</span>
+                        <div class="product-image">
+                            <img src="https://assets.umart.com.au/newsite/images/202504/source_img/Apple-MacBook-Pro-Apple-14in-MacBook-Pro-Apple-M4-Chip-10-Core-CPU-10-Core-GPU-1TB-SSD-16GB-RAM-Silver-MW2X3X-A-4.jpg"
+                                alt="MacBook Pro 14-inch (M3 Pro or M3 Max) product photo" loading="lazy"
+                                referrerpolicy="no-referrer" onerror="usePhotoFallback(this, 'pro')">
+                        </div>
+                        <h3>MacBook Pro 14-inch (M3 Pro or M3 Max)</h3>
+                        <p>Apple MacBook PRO • Introduced 2023</p>
+                        <div class="price">Price on Request</div>
+                        <div class="card-buttons">
+                            <button class="add-btn" type="button" data-add="MacBook Pro 14-inch (M3 Pro or M3 Max)">ADD
+                                TO CART +</button>
+                            <button class="details-btn" type="button"
+                                data-details="MacBook Pro 14-inch (M3 Pro or M3 Max)">VIEW DETAILS</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 product" data-category="pro" data-year="2023"
+                    data-name="macbook pro 16-inch (m3 pro or m3 max)" style="display: block;">
+                    <div class="product-card">
+                        <span class="product-badge">2023 Model</span>
+                        <div class="product-image">
+                            <img src="https://dam.elcorteingles.es/producto/www-001015215426550-00.jpg"
+                                alt="MacBook Pro 16-inch (M3 Pro or M3 Max) product photo" loading="lazy"
+                                referrerpolicy="no-referrer" onerror="usePhotoFallback(this, 'pro')"
+                                data-fallback-used="yes">
+                        </div>
+                        <h3>MacBook Pro 16-inch (M3 Pro or M3 Max)</h3>
+                        <p>Apple MacBook PRO • Introduced 2023</p>
+                        <div class="price">Price on Request</div>
+                        <div class="card-buttons">
+                            <button class="add-btn" type="button" data-add="MacBook Pro 16-inch (M3 Pro or M3 Max)">ADD
+                                TO CART +</button>
+                            <button class="details-btn" type="button"
+                                data-details="MacBook Pro 16-inch (M3 Pro or M3 Max)">VIEW DETAILS</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 product" data-category="pro" data-year="2023"
+                    data-name="macbook pro 14-inch (m2 pro or m2 max)" style="display: block;">
+                    <div class="product-card">
+                        <span class="product-badge">2023 Model</span>
+                        <div class="product-image">
+                            <img src="https://media.johnlewiscontent.com/i/JohnLewis/110036079"
+                                alt="MacBook Pro 14-inch (M2 Pro or M2 Max) product photo" loading="lazy"
+                                referrerpolicy="no-referrer" onerror="usePhotoFallback(this, 'pro')">
+                        </div>
+                        <h3>MacBook Pro 14-inch (M2 Pro or M2 Max)</h3>
+                        <p>Apple MacBook PRO • Introduced 2023</p>
+                        <div class="price">Price on Request</div>
+                        <div class="card-buttons">
+                            <button class="add-btn" type="button" data-add="MacBook Pro 14-inch (M2 Pro or M2 Max)">ADD
+                                TO CART +</button>
+                            <button class="details-btn" type="button"
+                                data-details="MacBook Pro 14-inch (M2 Pro or M2 Max)">VIEW DETAILS</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 product" data-category="pro" data-year="2023"
+                    data-name="macbook pro 16-inch (m2 pro or m2 max)" style="display: block;">
+                    <div class="product-card">
+                        <span class="product-badge">2023 Model</span>
+                        <div class="product-image">
+                            <img src="https://dam.elcorteingles.es/producto/www-001015215426550-00.jpg"
+                                alt="MacBook Pro 16-inch (M2 Pro or M2 Max) product photo" loading="lazy"
+                                referrerpolicy="no-referrer" onerror="usePhotoFallback(this, 'pro')"
+                                data-fallback-used="yes">
+                        </div>
+                        <h3>MacBook Pro 16-inch (M2 Pro or M2 Max)</h3>
+                        <p>Apple MacBook PRO • Introduced 2023</p>
+                        <div class="price">Price on Request</div>
+                        <div class="card-buttons">
+                            <button class="add-btn" type="button" data-add="MacBook Pro 16-inch (M2 Pro or M2 Max)">ADD
+                                TO CART +</button>
+                            <button class="details-btn" type="button"
+                                data-details="MacBook Pro 16-inch (M2 Pro or M2 Max)">VIEW DETAILS</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 product" data-category="pro" data-year="2021"
+                    data-name="macbook pro 14-inch (m1 pro or m1 max)" style="display: block;">
+                    <div class="product-card">
+                        <span class="product-badge">2021 Model</span>
+                        <div class="product-image">
+                            <img src="https://media.ldlc.com/r1600/ld/products/00/05/89/84/LD0005898490_1_0005900173.jpg"
+                                alt="MacBook Pro 14-inch (M1 Pro or M1 Max) product photo" loading="lazy"
+                                referrerpolicy="no-referrer" onerror="usePhotoFallback(this, 'pro')">
+                        </div>
+                        <h3>MacBook Pro 14-inch (M1 Pro or M1 Max)</h3>
+                        <p>Apple MacBook PRO • Introduced 2021</p>
+                        <div class="price">Price on Request</div>
+                        <div class="card-buttons">
+                            <button class="add-btn" type="button" data-add="MacBook Pro 14-inch (M1 Pro or M1 Max)">ADD
+                                TO CART +</button>
+                            <button class="details-btn" type="button"
+                                data-details="MacBook Pro 14-inch (M1 Pro or M1 Max)">VIEW DETAILS</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 product" data-category="pro" data-year="2021"
+                    data-name="macbook pro 16-inch (m1 pro or m1 max)" style="display: block;">
+                    <div class="product-card">
+                        <span class="product-badge">2021 Model</span>
+                        <div class="product-image">
+                            <img src="https://media.ldlc.com/r1600/ld/products/00/05/89/84/LD0005898490_1_0005900173.jpg"
+                                alt="MacBook Pro 16-inch (M1 Pro or M1 Max) product photo" loading="lazy"
+                                referrerpolicy="no-referrer" onerror="usePhotoFallback(this, 'pro')">
+                        </div>
+                        <h3>MacBook Pro 16-inch (M1 Pro or M1 Max)</h3>
+                        <p>Apple MacBook PRO • Introduced 2021</p>
+                        <div class="price">Price on Request</div>
+                        <div class="card-buttons">
+                            <button class="add-btn" type="button" data-add="MacBook Pro 16-inch (M1 Pro or M1 Max)">ADD
+                                TO CART +</button>
+                            <button class="details-btn" type="button"
+                                data-details="MacBook Pro 16-inch (M1 Pro or M1 Max)">VIEW DETAILS</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 product" data-category="pro" data-year="2022"
+                    data-name="macbook pro 13-inch (m2)" style="display: block;">
+                    <div class="product-card">
+                        <span class="product-badge">2022 Model</span>
+                        <div class="product-image">
+                            <img src="https://dam.elcorteingles.es/producto/www-001015215426550-00.jpg"
+                                alt="MacBook Pro 13-inch (M2) product photo" loading="lazy" referrerpolicy="no-referrer"
+                                onerror="usePhotoFallback(this, 'pro')" data-fallback-used="yes">
+                        </div>
+                        <h3>MacBook Pro 13-inch (M2)</h3>
+                        <p>Apple MacBook PRO • Introduced 2022</p>
+                        <div class="price">Price on Request</div>
+                        <div class="card-buttons">
+                            <button class="add-btn" type="button" data-add="MacBook Pro 13-inch (M2)">ADD TO CART
+                                +</button>
+                            <button class="details-btn" type="button" data-details="MacBook Pro 13-inch (M2)">VIEW
+                                DETAILS</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 product" data-category="pro" data-year="2020"
+                    data-name="macbook pro 13-inch (m1)" style="display: block;">
+                    <div class="product-card">
+                        <span class="product-badge">2020 Model</span>
+                        <div class="product-image">
+                            <img src="https://dam.elcorteingles.es/producto/www-001015215426550-00.jpg"
+                                alt="MacBook Pro 13-inch (M1) product photo" loading="lazy" referrerpolicy="no-referrer"
+                                onerror="usePhotoFallback(this, 'pro')" data-fallback-used="yes">
+                        </div>
+                        <h3>MacBook Pro 13-inch (M1)</h3>
+                        <p>Apple MacBook PRO • Introduced 2020</p>
+                        <div class="price">Price on Request</div>
+                        <div class="card-buttons">
+                            <button class="add-btn" type="button" data-add="MacBook Pro 13-inch (M1)">ADD TO CART
+                                +</button>
+                            <button class="details-btn" type="button" data-details="MacBook Pro 13-inch (M1)">VIEW
+                                DETAILS</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 product" data-category="pro" data-year="2020"
+                    data-name="macbook pro 13-inch (intel, 2 ports)" style="display: block;">
+                    <div class="product-card">
+                        <span class="product-badge">2020 Model</span>
+                        <div class="product-image">
+                            <img src="https://dam.elcorteingles.es/producto/www-001015215426550-00.jpg"
+                                alt="MacBook Pro 13-inch (Intel, 2 ports) product photo" loading="lazy"
+                                referrerpolicy="no-referrer" onerror="usePhotoFallback(this, 'pro')"
+                                data-fallback-used="yes">
+                        </div>
+                        <h3>MacBook Pro 13-inch (Intel, 2 ports)</h3>
+                        <p>Apple MacBook PRO • Introduced 2020</p>
+                        <div class="price">Price on Request</div>
+                        <div class="card-buttons">
+                            <button class="add-btn" type="button" data-add="MacBook Pro 13-inch (Intel, 2 ports)">ADD TO
+                                CART +</button>
+                            <button class="details-btn" type="button"
+                                data-details="MacBook Pro 13-inch (Intel, 2 ports)">VIEW DETAILS</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 product" data-category="pro" data-year="2020"
+                    data-name="macbook pro 13-inch (intel, 4 ports)" style="display: block;">
+                    <div class="product-card">
+                        <span class="product-badge">2020 Model</span>
+                        <div class="product-image">
+                            <img src="https://dam.elcorteingles.es/producto/www-001015215426550-00.jpg"
+                                alt="MacBook Pro 13-inch (Intel, 4 ports) product photo" loading="lazy"
+                                referrerpolicy="no-referrer" onerror="usePhotoFallback(this, 'pro')"
+                                data-fallback-used="yes">
+                        </div>
+                        <h3>MacBook Pro 13-inch (Intel, 4 ports)</h3>
+                        <p>Apple MacBook PRO • Introduced 2020</p>
+                        <div class="price">Price on Request</div>
+                        <div class="card-buttons">
+                            <button class="add-btn" type="button" data-add="MacBook Pro 13-inch (Intel, 4 ports)">ADD TO
+                                CART +</button>
+                            <button class="details-btn" type="button"
+                                data-details="MacBook Pro 13-inch (Intel, 4 ports)">VIEW DETAILS</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 product" data-category="pro" data-year="2019"
+                    data-name="macbook pro 16-inch (intel)" style="display: block;">
+                    <div class="product-card">
+                        <span class="product-badge">2019 Model</span>
+                        <div class="product-image">
+                            <img src="https://www.notebookcheck.info/uploads/tx_nbc2/Bildschirmfoto_2021-06-25_um_10.31.16.png"
+                                alt="MacBook Pro 16-inch (Intel) product photo" loading="lazy"
+                                referrerpolicy="no-referrer" onerror="usePhotoFallback(this, 'pro')">
+                        </div>
+                        <h3>MacBook Pro 16-inch (Intel)</h3>
+                        <p>Apple MacBook PRO • Introduced 2019</p>
+                        <div class="price">Price on Request</div>
+                        <div class="card-buttons">
+                            <button class="add-btn" type="button" data-add="MacBook Pro 16-inch (Intel)">ADD TO CART
+                                +</button>
+                            <button class="details-btn" type="button" data-details="MacBook Pro 16-inch (Intel)">VIEW
+                                DETAILS</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="no-results" id="noResults" style="display: none;">
+                <h4>No MacBooks match your filters.</h4>
+            </div>
+        </div>
+    </section>
+<footer class="vip-footer">
+
+    <div class="footer-container">
+
+        <!-- BRAND INFORMATION -->
+        <div class="footer-column footer-brand">
+
+            <div class="footer-logo">
+                <img src="images/Screenshot 2026-11-05 131459.png"
+                     alt="MEMON APPLE iSTORE Logo"
+                     class="footer-round-logo">
+
+                
+            </div>
+
+            <p>
+                Discover premium Apple products with
+                elegant design, quality and exceptional
+                customer service.
+            </p>
+
+            <!-- SOCIAL LINKS -->
+            <div class="footer-social">
+
+                <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+
+                <a href="https://www.whatsapp.com/" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- QUICK LINKS -->
+        <div class="footer-column">
+            <h3>Quick Links</h3>
+
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="offers.html">New Offers</a></li>
+           
+            </ul>
+        </div>
+
+
+        <!-- PRODUCTS -->
+        <div class="footer-column">
+            <h3>Our Products</h3>
+
+            <ul>
+                <li><a href="iphones.html">iPhone</a></li>
+                <li><a href="macbooks.html">MacBook</a></li>
+                <li><a href="ipads.html">iPad</a></li>
+                <li><a href="watches.html">Apple Watch</a></li>
+                <li><a href="airpods.html">AirPods</a></li>
+                <li><a href="accessories.html">Accessories</a></li>
+            </ul>
+        </div>
+
+
+        <!-- CUSTOMER SUPPORT -->
+        <div class="footer-column">
+            <h3>Customer Support</h3>
+
+            <ul>
+                <li><a href="Privacy Policy.html">Privacy Policy</a></li>
+
+                <li><a href="Terms and Conditions.html">Terms and Conditions</a></li>
+              
+                <li><a href="Refund and Returns.html">Refund and Returns</a></li>
+
+                <li><a href="login.html">My Account</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+
+    <!-- NEWSLETTER -->
+    <div class="footer-newsletter">
+
+        <div>
+            <h3>Stay Connected With Us</h3>
+            <p>Subscribe for updates about our latest collections.</p>
+        </div>
+
+        <form class="newsletter-form" id="newsletterForm">
+            <input type="email"
+                   placeholder="Enter your email address"
+                   required>
+
+            <button type="submit">Subscribe</button>
+        </form>
+
+    </div>
+
+
+    <!-- FOOTER BOTTOM -->
+    <div class="footer-bottom">
+
+        <p>
+            © <span id="footerYear"></span>
+            MEMON APPLE iSTORE. All Rights Reserved.
+        </p>
+
+        <div class="footer-bottom-links">
+            <a href="Privacy Policy.html">Privacy Policy</a>
+            <a href="Shipping Policy.html">Shipping Policy</a>
+
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <button id="backToTop" class="back-to-top"
+                aria-label="Back to top">
+            <i class="fa-solid fa-arrow-up"></i>
+        </button>
+
+    </div>
+
+</footer>
+    <!-- FOOTER -->
+    <footer class="vip-footer">
+
+    <div class="footer-container">
+
+        <!-- BRAND INFORMATION -->
+        <div class="footer-column footer-brand">
+
+            <div class="footer-logo">
+                <img src="images/af3fe851-cd02-4457-8a6b-22f265b469ac.png"
+                     alt="MEMON APPLE iSTORE Logo"
+                     class="footer-round-logo">
+
+                <div class="footer-logo-text">
+                    <h2>MEMON APPLE</h2>
+                    <span>iSTORE</span>
+                </div>
+            </div>
+
+            <p>
+                Discover premium Apple products with
+                elegant design, quality and exceptional
+                customer service.
+            </p>
+
+            <!-- SOCIAL LINKS -->
+            <div class="footer-social">
+
+                <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+
+                <a href="https://www.whatsapp.com/" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- QUICK LINKS -->
+        <div class="footer-column">
+            <h3>Quick Links</h3>
+
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="offers.html">New Offers</a></li>
+           
+            </ul>
+        </div>
+
+
+        <!-- PRODUCTS -->
+        <div class="footer-column">
+            <h3>Our Products</h3>
+
+            <ul>
+                <li><a href="iphones.html">iPhone</a></li>
+                <li><a href="macbooks.html">MacBook</a></li>
+                <li><a href="ipads.html">iPad</a></li>
+                <li><a href="watches.html">Apple Watch</a></li>
+                <li><a href="airpods.html">AirPods</a></li>
+                <li><a href="accessories.html">Accessories</a></li>
+            </ul>
+        </div>
+
+
+        <!-- CUSTOMER SUPPORT -->
+        <div class="footer-column">
+            <h3>Customer Support</h3>
+
+            <ul>
+                <li><a href="Privacy Policy.html">Privacy Policy</a></li>
+
+                <li><a href="Terms and Conditions.html">Terms and Conditions</a></li>
+              
+                <li><a href="Refund and Returns.html">Refund and Returns</a></li>
+
+                <li><a href="login.html">My Account</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+
+    <!-- NEWSLETTER -->
+    <div class="footer-newsletter">
+
+        <div>
+            <h3>Stay Connected With Us</h3>
+            <p>Subscribe for updates about our latest collections.</p>
+        </div>
+
+        <form class="newsletter-form" id="newsletterForm">
+            <input type="email"
+                   placeholder="Enter your email address"
+                   required>
+
+            <button type="submit">Subscribe</button>
+        </form>
+
+    </div>
+
+
+    <!-- FOOTER BOTTOM -->
+    <div class="footer-bottom">
+
+        <p>
+            © <span id="footerYear"></span>
+            MEMON APPLE iSTORE. All Rights Reserved.
+        </p>
+
+        <div class="footer-bottom-links">
+            <a href="Privacy Policy.html">Privacy Policy</a>
+            <a href="Shipping Policy.html">Shipping Policy</a>
+
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <button id="backToTop" class="back-to-top"
+                aria-label="Back to top">
+            <i class="fa-solid fa-arrow-up"></i>
+        </button>
+
+    </div>
+
+</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const macbookModels = [{ "name": "MacBook Neo (A18 Pro)", "year": 2026, "category": "neo", "photo": "https://www.maccenter.vn/App_Images/MacBookNeo-Citrus.jpg", "preOrder": false, "note": "Entry Mac notebook" }, { "name": "MacBook Air 13-inch (M5)", "year": 2026, "category": "air", "photo": "https://dam.elcorteingles.es/producto/www-001015215426709-00.jpg", "preOrder": false, "note": "" }, { "name": "MacBook Air 15-inch (M5)", "year": 2026, "category": "air", "photo": "https://dam.elcorteingles.es/producto/www-001015215426709-00.jpg", "preOrder": false, "note": "" }, { "name": "MacBook Air 13-inch (M4)", "year": 2025, "category": "air", "photo": "https://bizweb.dktcdn.net/100/459/953/products/macbook-air-m4-silver-reseller.jpg?v=1761100787753", "preOrder": false, "note": "" }, { "name": "MacBook Air 15-inch (M4)", "year": 2025, "category": "air", "photo": "https://bizweb.dktcdn.net/100/459/953/products/macbook-air-m4-silver-reseller.jpg?v=1761100787753", "preOrder": false, "note": "" }, { "name": "MacBook Air 13-inch (M3)", "year": 2024, "category": "air", "photo": "https://product.hstatic.net/200000763869/product/screenshot_2024-05-22_at_17.43.02_5c02c76d0b0546bb98a4e3379783e30e_master.png", "preOrder": false, "note": "" }, { "name": "MacBook Air 15-inch (M3)", "year": 2024, "category": "air", "photo": "https://product.hstatic.net/200000763869/product/screenshot_2024-05-22_at_17.43.02_5c02c76d0b0546bb98a4e3379783e30e_master.png", "preOrder": false, "note": "" }, { "name": "MacBook Air 13-inch (M2)", "year": 2022, "category": "air", "photo": "https://tekreplay.com/cdn/shop/files/bc56f38a-e720-4b77-94d6-c65457583b77.jpg?v=1734551222", "preOrder": false, "note": "" }, { "name": "MacBook Air 15-inch (M2)", "year": 2023, "category": "air", "photo": "https://tekreplay.com/cdn/shop/files/bc56f38a-e720-4b77-94d6-c65457583b77.jpg?v=1734551222", "preOrder": false, "note": "" }, { "name": "MacBook Air 13-inch (M1)", "year": 2020, "category": "air", "photo": "https://i5.walmartimages.com/seo/Pre-Owned-2020-Apple-MacBook-Air-13-Inch-Silver-1-1GHz-i3-8GB-RAM-256GB-SSD-Fair_9fb6469d-729a-4a6a-b36e-c4bbb3b313d3.8df856c504b861eeaeec27018776b3cb.jpeg", "preOrder": false, "note": "" }, { "name": "MacBook Air (Intel, 2020)", "year": 2020, "category": "air", "photo": "https://i5.walmartimages.com/seo/Pre-Owned-2020-Apple-MacBook-Air-13-Inch-Silver-1-1GHz-i3-8GB-RAM-256GB-SSD-Fair_9fb6469d-729a-4a6a-b36e-c4bbb3b313d3.8df856c504b861eeaeec27018776b3cb.jpeg", "preOrder": false, "note": "" }, { "name": "MacBook Air (Intel, 2017)", "year": 2017, "category": "air", "photo": "https://i5.walmartimages.com/seo/Apple-MacBook-Air-MQD32LL-A-Mid-2017-13-3-inch-Silver-Intel-Core-i7-5650U-2-2GHz-8GB-RAM-256GB-SSD-Scratch-and-Dent_3cd3bc64-be7e-4e56-8c44-a169abd8e98d.eb4fa387b04ba63f61110246c235352e.jpeg", "preOrder": false, "note": "" }, { "name": "MacBook Pro 14-inch (M6)", "year": 2026, "category": "pro", "photo": "https://dam.elcorteingles.es/producto/www-001015215426550-00.jpg", "preOrder": true, "note": "Pre-order listing • expected availability Nov 6, 2026" }, { "name": "MacBook Pro 14-inch (M5 Pro)", "year": 2026, "category": "pro", "photo": "https://dam.elcorteingles.es/producto/www-001015215426550-00.jpg", "preOrder": false, "note": "" }, { "name": "MacBook Pro 14-inch (M5 Max)", "year": 2026, "category": "pro", "photo": "https://dam.elcorteingles.es/producto/www-001015215426550-00.jpg", "preOrder": false, "note": "" }, { "name": "MacBook Pro 16-inch (M5 Pro)", "year": 2026, "category": "pro", "photo": "https://www.pcrichard.com/on/demandware.static/-/Sites-pcrichard-master-product-catalog/default/dw874370fc/images/hires/Z_MGE64LL-A.jpg", "preOrder": false, "note": "" }, { "name": "MacBook Pro 16-inch (M5 Max)", "year": 2026, "category": "pro", "photo": "https://www.pcrichard.com/on/demandware.static/-/Sites-pcrichard-master-product-catalog/default/dw874370fc/images/hires/Z_MGE64LL-A.jpg", "preOrder": false, "note": "" }, { "name": "MacBook Pro 14-inch (M5)", "year": 2025, "category": "pro", "photo": "https://dam.elcorteingles.es/producto/www-001015215426550-00.jpg", "preOrder": false, "note": "" }, { "name": "MacBook Pro 14-inch (M4 Pro)", "year": 2024, "category": "pro", "photo": "https://assets.umart.com.au/newsite/images/202504/source_img/Apple-MacBook-Pro-Apple-14in-MacBook-Pro-Apple-M4-Chip-10-Core-CPU-10-Core-GPU-1TB-SSD-16GB-RAM-Silver-MW2X3X-A-4.jpg", "preOrder": false, "note": "" }, { "name": "MacBook Pro 14-inch (M4 Max)", "year": 2024, "category": "pro", "photo": "https://assets.umart.com.au/newsite/images/202504/source_img/Apple-MacBook-Pro-Apple-14in-MacBook-Pro-Apple-M4-Chip-10-Core-CPU-10-Core-GPU-1TB-SSD-16GB-RAM-Silver-MW2X3X-A-4.jpg", "preOrder": false, "note": "" }, { "name": "MacBook Pro 16-inch (M4 Pro)", "year": 2024, "category": "pro", "photo": "https://www.pcrichard.com/on/demandware.static/-/Sites-pcrichard-master-product-catalog/default/dw874370fc/images/hires/Z_MGE64LL-A.jpg", "preOrder": false, "note": "" }, { "name": "MacBook Pro 16-inch (M4 Max)", "year": 2024, "category": "pro", "photo": "https://www.pcrichard.com/on/demandware.static/-/Sites-pcrichard-master-product-catalog/default/dw874370fc/images/hires/Z_MGE64LL-A.jpg", "preOrder": false, "note": "" }, { "name": "MacBook Pro 14-inch (M4)", "year": 2024, "category": "pro", "photo": "https://assets.umart.com.au/newsite/images/202504/source_img/Apple-MacBook-Pro-Apple-14in-MacBook-Pro-Apple-M4-Chip-10-Core-CPU-10-Core-GPU-1TB-SSD-16GB-RAM-Silver-MW2X3X-A-4.jpg", "preOrder": false, "note": "" }, { "name": "MacBook Pro 14-inch (M3)", "year": 2023, "category": "pro", "photo": "https://assets.umart.com.au/newsite/images/202504/source_img/Apple-MacBook-Pro-Apple-14in-MacBook-Pro-Apple-M4-Chip-10-Core-CPU-10-Core-GPU-1TB-SSD-16GB-RAM-Silver-MW2X3X-A-4.jpg", "preOrder": false, "note": "" }, { "name": "MacBook Pro 14-inch (M3 Pro or M3 Max)", "year": 2023, "category": "pro", "photo": "https://assets.umart.com.au/newsite/images/202504/source_img/Apple-MacBook-Pro-Apple-14in-MacBook-Pro-Apple-M4-Chip-10-Core-CPU-10-Core-GPU-1TB-SSD-16GB-RAM-Silver-MW2X3X-A-4.jpg", "preOrder": false, "note": "" }, { "name": "MacBook Pro 16-inch (M3 Pro or M3 Max)", "year": 2023, "category": "pro", "photo": "https://www.pcrichard.com/on/demandware.static/-/Sites-pcrichard-master-product-catalog/default/dw874370fc/images/hires/Z_MGE64LL-A.jpg", "preOrder": false, "note": "" }, { "name": "MacBook Pro 14-inch (M2 Pro or M2 Max)", "year": 2023, "category": "pro", "photo": "https://media.johnlewiscontent.com/i/JohnLewis/110036079", "preOrder": false, "note": "" }, { "name": "MacBook Pro 16-inch (M2 Pro or M2 Max)", "year": 2023, "category": "pro", "photo": "https://www.pcrichard.com/on/demandware.static/-/Sites-pcrichard-master-product-catalog/default/dw874370fc/images/hires/Z_MGE64LL-A.jpg", "preOrder": false, "note": "" }, { "name": "MacBook Pro 14-inch (M1 Pro or M1 Max)", "year": 2021, "category": "pro", "photo": "https://media.ldlc.com/r1600/ld/products/00/05/89/84/LD0005898490_1_0005900173.jpg", "preOrder": false, "note": "" }, { "name": "MacBook Pro 16-inch (M1 Pro or M1 Max)", "year": 2021, "category": "pro", "photo": "https://media.ldlc.com/r1600/ld/products/00/05/89/84/LD0005898490_1_0005900173.jpg", "preOrder": false, "note": "" }, { "name": "MacBook Pro 13-inch (M2)", "year": 2022, "category": "pro", "photo": "https://www.iphone-store.cz/fotky4935/macbook/pro13%2522M2.jpeg", "preOrder": false, "note": "" }, { "name": "MacBook Pro 13-inch (M1)", "year": 2020, "category": "pro", "photo": "https://distro.justror.com/media/3a/be/23/1687289064/Apple-13-Inch-MacBook-Pro-2020-Space-Gray.png?ts=1689845919", "preOrder": false, "note": "" }, { "name": "MacBook Pro 13-inch (Intel, 2 ports)", "year": 2020, "category": "pro", "photo": "https://distro.justror.com/media/3a/be/23/1687289064/Apple-13-Inch-MacBook-Pro-2020-Space-Gray.png?ts=1689845919", "preOrder": false, "note": "" }, { "name": "MacBook Pro 13-inch (Intel, 4 ports)", "year": 2020, "category": "pro", "photo": "https://distro.justror.com/media/3a/be/23/1687289064/Apple-13-Inch-MacBook-Pro-2020-Space-Gray.png?ts=1689845919", "preOrder": false, "note": "" }, { "name": "MacBook Pro 16-inch (Intel)", "year": 2019, "category": "pro", "photo": "https://www.notebookcheck.info/uploads/tx_nbc2/Bildschirmfoto_2021-06-25_um_10.31.16.png", "preOrder": false, "note": "" }];
+        let selectedCategory = 'all';
+
+        function escapeHTML(value) {
+            return String(value).replace(/[&<>"']/g, character => ({
+                '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;'
+            }[character]));
+        }
+
+        function renderProducts() {
+            const productList = document.getElementById('productList');
+            productList.innerHTML = macbookModels.map(model => {
+                const safeName = escapeHTML(model.name);
+                const badgeClass = model.preOrder ? 'product-badge preorder' : 'product-badge';
+                const badgeText = model.preOrder ? 'Pre-Order • Launch Nov 6, 2026' : `${model.year} Model`;
+                const description = model.preOrder
+                    ? model.note
+                    : `Apple MacBook ${model.category.toUpperCase()} • Introduced ${model.year}`;
+                const safePhoto = escapeHTML(model.photo);
+                return `
+                    <div class="col-lg-3 col-md-6 product"
+                         data-category="${model.category}"
+                         data-year="${model.year}"
+                         data-name="${safeName.toLowerCase()}">
+                        <div class="product-card">
+                            <span class="${badgeClass}">${badgeText}</span>
+                            <div class="product-image">
+                                <img src="${safePhoto}"
+                                     alt="${safeName} product photo"
+                                     loading="lazy"
+                                     referrerpolicy="no-referrer"
+                                     onerror="usePhotoFallback(this, '${model.category}')">
+                            </div>
+                            <h3>${safeName}</h3>
+                            <p>${description}</p>
+                            <div class="price">Price on Request</div>
+                            <div class="card-buttons">
+                                <button class="add-btn" type="button" data-add="${safeName}">ADD TO CART +</button>
+                                <button class="details-btn" type="button" data-details="${safeName}">VIEW DETAILS</button>
+                            </div>
+                        </div>
+                    </div>`;
+            }).join('');
+
+            productList.querySelectorAll('[data-add]').forEach(button => {
+                button.addEventListener('click', () => addToCart(button.dataset.add));
+            });
+            productList.querySelectorAll('[data-details]').forEach(button => {
+                button.addEventListener('click', () => viewDetails(button.dataset.details));
+            });
+            applyFilters();
+        }
+
+        const photoFallbacks = {
+            neo: "https://www.maccenter.vn/App_Images/MacBookNeo-Citrus.jpg",
+            air: "https://dam.elcorteingles.es/producto/www-001015215426709-00.jpg",
+            pro: "https://dam.elcorteingles.es/producto/www-001015215426550-00.jpg"
+        };
+
+        function genericLaptopFallback() {
+            const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="640" height="420" viewBox="0 0 640 420">
+                <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fafbff"/><stop offset="1" stop-color="#d9dce4"/></linearGradient></defs>
+                <rect width="640" height="420" rx="28" fill="url(#g)"/>
+                <rect x="135" y="62" width="370" height="235" rx="18" fill="#20232a" stroke="#9da3ae" stroke-width="8"/>
+                <rect x="150" y="78" width="340" height="203" rx="8" fill="#b9c9df"/>
+                <path d="M150 250 Q280 95 490 170 L490 281 L150 281Z" fill="#637f9f" opacity=".8"/>
+                <path d="M80 302 H560 L524 335 H116Z" fill="#aeb4c0" stroke="#727b89" stroke-width="5"/>
+                <path d="M255 305 H385 L375 316 H265Z" fill="#727b89"/>
+                <text x="320" y="380" text-anchor="middle" font-family="Arial" font-size="19" fill="#687080">MacBook photo unavailable</text>
+            </svg>`;
+            return 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(svg);
+        }
+
+        function usePhotoFallback(img, category) {
+            if (img.dataset.fallbackUsed === 'yes') {
+                img.onerror = null;
+                img.src = genericLaptopFallback();
+                img.alt = 'MacBook image placeholder';
+                return;
+            }
+            img.dataset.fallbackUsed = 'yes';
+            img.onerror = null;
+            const fallback = photoFallbacks[category] || photoFallbacks.air;
+            if (img.src !== fallback) img.src = fallback;
+            else img.src = genericLaptopFallback();
+        }
+
+        function filterCategory(category, button) {
+            selectedCategory = category;
+            document.querySelectorAll('.filter-btn').forEach(item => item.classList.remove('active'));
+            button.classList.add('active');
+            applyFilters();
+        }
+
+        function applyFilters() {
+            const searchValue = document.getElementById('searchInput').value.toLowerCase().trim();
+            const yearValue = document.getElementById('yearSelect').value;
+            const products = document.querySelectorAll('.product');
+            let visibleCount = 0;
+            products.forEach(product => {
+                const categoryMatch = selectedCategory === 'all' || product.dataset.category === selectedCategory;
+                const yearMatch = yearValue === 'all' || product.dataset.year === yearValue;
+                const searchMatch = product.dataset.name.includes(searchValue);
+                if (categoryMatch && yearMatch && searchMatch) {
+                    product.style.display = 'block';
+                    visibleCount++;
+                } else {
+                    product.style.display = 'none';
+                }
+            });
+            document.getElementById('resultCount').textContent = `Showing ${visibleCount} of ${macbookModels.length} MacBook model(s)`;
+            document.getElementById('noResults').style.display = visibleCount === 0 ? 'block' : 'none';
+        }
+
+        document.getElementById('searchInput').addEventListener('input', applyFilters);
+
+        function updateCartCounter() {
+            let cart = [];
+            try { cart = JSON.parse(localStorage.getItem('cartItems')) || []; }
+            catch (error) { cart = []; }
+            document.getElementById('cartCount').textContent = cart.length;
+        }
+
+        function addToCart(itemName) {
+            let cart = [];
+            try { cart = JSON.parse(localStorage.getItem('cartItems')) || []; }
+            catch (error) { cart = []; }
+            cart.push(itemName);
+            localStorage.setItem('cartItems', JSON.stringify(cart));
+            updateCartCounter();
+            alert(`${itemName} added to your cart!`);
+        }
+
+        function viewDetails(itemName) {
+            alert(`Showing detailed specifications for ${itemName}. Connect a product-details page or database to show full live details.`);
+        }
+
+        renderProducts();
+        updateCartCounter();
+    </script>
+
+
+</body>
+
+</html>

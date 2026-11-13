@@ -1,0 +1,270 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login | MEMON APPLE iSTORE</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="login.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+<header class="site-header">
+    <div class="header-container">
+
+        <a href="index.html" class="brand">
+            <img src="Images/Screenshot 2026-11-05 131459.png"
+                 alt="MEMON APPLE iSTORE Logo"
+                 class="brand-logo">
+        </a>
+
+        <nav class="navigation" id="navigation">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="offers.html">New Offers</a>
+        </nav>
+
+        <div class="header-actions">
+            <a href="login.html" class="login-btn">Login</a>
+            <a href="signup.html" class="signin-btn">Sign In</a>
+
+            <button class="menu-toggle" id="menu-toggle" type="button">
+                ☰
+            </button>
+        </div>
+
+    </div>
+</header>
+
+<main class="login-wrapper">
+
+    <div class="login-card">
+
+        <div class="login-logo">
+            <img src="Images/Screenshot 2026-11-05 131459.png"
+                 alt="MEMON APPLE iSTORE">
+        </div>
+
+        <div class="login-heading">
+            <span class="login-tag">WELCOME BACK</span>
+            <h1>Welcome Back!</h1>
+            <p>Login to your MEMON APPLE iSTORE account.</p>
+        </div>
+
+        <form id="loginForm">
+
+            <div class="login-group">
+                <label for="email">Email Address</label>
+
+                <div class="login-input">
+                    <i class="fa-regular fa-envelope"></i>
+                    <input type="email"
+                           id="email"
+                           placeholder="Enter your email address"
+                           required>
+                </div>
+            </div>
+
+            <div class="login-group">
+                <label for="password">Password</label>
+
+                <div class="login-input">
+                    <i class="fa-solid fa-lock"></i>
+
+                    <input type="password"
+                           id="password"
+                           placeholder="Enter your password"
+                           required>
+
+                    <button type="button"
+                            class="password-toggle"
+                            id="togglePassword"
+                            aria-label="Show password">
+                        <i class="fa-regular fa-eye"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="login-options">
+                <label class="remember">
+                    <input type="checkbox" id="remember">
+                    <span>Remember Me</span>
+                </label>
+
+                <a href="forgot-password.html">Forgot Password?</a>
+            </div>
+
+            <button type="submit" class="login-submit">
+                LOGIN TO ACCOUNT
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+
+            <p id="loginMessage" class="login-message" role="status"></p>
+
+        </form>
+
+        <div class="login-divider">
+            <span>OR</span>
+        </div>
+
+        <div class="signup-link">
+            Don't have an account?
+            <a href="signup.html">Create Account</a>
+        </div>
+
+        <div class="login-bottom">
+            <i class="fa-solid fa-shield-halved"></i>
+            MEMON APPLE iSTORE
+        </div>
+
+    </div>
+
+</main>
+
+<footer class="vip-footer">
+
+    <div class="footer-container">
+
+        <!-- BRAND INFORMATION -->
+        <div class="footer-column footer-brand">
+
+            <div class="footer-logo">
+                <img src="images/Screenshot 2026-11-05 131459.png"
+                     alt="MEMON APPLE iSTORE Logo"
+                     class="footer-round-logo">
+
+               
+            </div>
+
+            <p>
+                Discover premium Apple products with
+                elegant design, quality and exceptional
+                customer service.
+            </p>
+
+            <!-- SOCIAL LINKS -->
+            <div class="footer-social">
+
+                <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+
+                <a href="https://www.whatsapp.com/" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- QUICK LINKS -->
+        <div class="footer-column">
+            <h3>Quick Links</h3>
+
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="offers.html">New Offers</a></li>
+           
+            </ul>
+        </div>
+
+
+        <!-- PRODUCTS -->
+        <div class="footer-column">
+            <h3>Our Products</h3>
+
+            <ul>
+                <li><a href="iphones.html">iPhone</a></li>
+                <li><a href="macbooks.html">MacBook</a></li>
+                <li><a href="ipads.html">iPad</a></li>
+                <li><a href="watches.html">Apple Watch</a></li>
+                <li><a href="airpods.html">AirPods</a></li>
+                <li><a href="accessories.html">Accessories</a></li>
+            </ul>
+        </div>
+
+
+        <!-- CUSTOMER SUPPORT -->
+        <div class="footer-column">
+            <h3>Customer Support</h3>
+
+            <ul>
+                <li><a href="Privacy Policy.html">Privacy Policy</a></li>
+
+                <li><a href="Terms and Conditions.html">Terms and Conditions</a></li>
+              
+                <li><a href="Refund and Returns.html">Refund and Returns</a></li>
+
+                <li><a href="login.html">My Account</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+
+    <!-- NEWSLETTER -->
+    <div class="footer-newsletter">
+
+        <div>
+            <h3>Stay Connected With Us</h3>
+            <p>Subscribe for updates about our latest collections.</p>
+        </div>
+
+        <form class="newsletter-form" id="newsletterForm">
+            <input type="email"
+                   placeholder="Enter your email address"
+                   required>
+
+            <button type="submit">Subscribe</button>
+        </form>
+
+    </div>
+
+
+    <!-- FOOTER BOTTOM -->
+    <div class="footer-bottom">
+
+        <p>
+            © <span id="footerYear"></span>
+            MEMON APPLE iSTORE. All Rights Reserved.
+        </p>
+
+        <div class="footer-bottom-links">
+            <a href="Privacy Policy.html">Privacy Policy</a>
+            <a href="Shipping Policy.html">Shipping Policy</a>
+
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <button id="backToTop" class="back-to-top"
+                aria-label="Back to top">
+            <i class="fa-solid fa-arrow-up"></i>
+        </button>
+
+    </div>
+
+</footer>
+
+<script src="login.js"></script>
+
+</body>
+</html>

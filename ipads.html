@@ -1,0 +1,1353 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f5f5f7">
+    <title>iPads | MEMON APPLE iSTORE</title>
+    
+  
+    
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f5f5f7;
+            color: #222;
+        }
+
+        /* HEADER */
+        .navbar {
+            background: #ffffffd9;
+            backdrop-filter: blur(15px);
+            box-shadow: 0 3px 20px #00000008;
+            padding: 18px 5%;
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+            letter-spacing: 1px;
+            color: #222;
+        }
+
+        .nav-link {
+            color: #444;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .nav-link:hover {
+            color: #999;
+        }
+
+        .cart {
+            border: 1px solid #ddd;
+            padding: 9px 16px;
+            border-radius: 25px;
+            color: #222;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        /* HERO */
+        .hero {
+            padding: 85px 20px;
+            text-align: center;
+            background: linear-gradient(135deg, #fff, #e8e8ec, #fdfdfd);
+        }
+
+        .hero h1 {
+            font-size: 52px;
+            font-weight: 800;
+            letter-spacing: -2px;
+        }
+
+        .hero p {
+            color: #777;
+            font-size: 17px;
+            margin-top: 15px;
+        }
+
+        .hero span {
+            color: #999;
+        }
+
+        .search-box {
+            max-width: 550px;
+            margin: 35px auto 0;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 16px 22px;
+            border: 1px solid #ddd;
+            border-radius: 30px;
+            outline: none;
+            background: white;
+        }
+
+        /* PRODUCTS */
+        .products-section {
+            padding: 65px 5%;
+        }
+
+        .section-heading {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .section-heading h2 {
+            font-size: 35px;
+            font-weight: 800;
+        }
+
+        .section-heading p {
+            color: #888;
+        }
+
+        .filters {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .filter-btn {
+            border: 1px solid #ddd;
+            background: white;
+            padding: 10px 22px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: .3s;
+        }
+
+        .filter-btn.active,
+        .filter-btn:hover {
+            background: #222;
+            color: white;
+        }
+
+        .year-filter {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+
+        .year-filter select {
+            padding: 10px 18px;
+            border-radius: 25px;
+            border: 1px solid #ddd;
+            background: white;
+            outline: none;
+            cursor: pointer;
+        }
+
+        .result-count {
+            text-align: center;
+            color: #888;
+            font-size: 13px;
+            margin-bottom: 25px;
+        }
+
+        /* PRODUCT CARD */
+        .product-card {
+            position: relative;
+            background: linear-gradient(145deg, #fff, #f1f2f5);
+            border: 1px solid #e6e6e6;
+            border-radius: 24px;
+            padding: 20px;
+            text-align: center;
+            height: 100%;
+            transition: .35s;
+            box-shadow: 0 8px 25px #00000008;
+        }
+
+        .product-card:hover {
+            transform: translateY(-9px);
+            box-shadow: 0 18px 40px #00000015;
+        }
+
+        .product-badge {
+            display: inline-block;
+            background: #222;
+            color: white;
+            padding: 6px 13px;
+            border-radius: 20px;
+            font-size: 11px;
+            margin-bottom: 13px;
+        }
+
+        .product-badge.expected {
+            background: #b8860b;
+        }
+
+        .product-image {
+            height: 220px;
+            background: linear-gradient(145deg, #f9f9fb, #e6e6eb);
+            border-radius: 18px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            padding: 15px;
+            transition: .4s;
+        }
+
+        .product-card:hover .product-image img {
+            transform: scale(1.07);
+        }
+
+        .product-card h3 {
+            font-size: 19px;
+            font-weight: 700;
+        }
+
+        .product-card>p {
+            color: #888;
+            font-size: 13px;
+        }
+
+        .price {
+            font-size: 16px;
+            font-weight: bold;
+            margin: 15px 0;
+            color: #222;
+        }
+
+        .card-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 9px;
+        }
+
+        .add-btn {
+            width: 100%;
+            border: 0;
+            background: #222;
+            color: white;
+            padding: 13px;
+            border-radius: 12px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: .3s;
+        }
+
+        .add-btn:hover {
+            background: #555;
+        }
+
+        .details-btn {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            background: white;
+            color: #222;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .details-btn:hover {
+            background: #e9e9ed;
+        }
+
+        .no-results {
+            display: none;
+            text-align: center;
+            color: #777;
+            padding: 35px;
+            width: 100%;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #171717;
+            color: white;
+            text-align: center;
+            padding: 35px 15px;
+        }
+
+        footer p {
+            color: #aaa;
+            font-size: 13px;
+            margin: 8px 0 0;
+        }
+
+        /* MOBILE */
+        @media(max-width:600px) {
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero {
+                padding: 60px 15px;
+            }
+
+            .section-heading h2 {
+                font-size: 28px;
+            }
+
+            .product-image {
+                height: 200px;
+            }
+        }
+    
+        .live-note { font-size: 12px; color: #777; margin-top: 10px; }
+        .product-badge.preorder { background: #9b6b17; }
+        .product-image img { object-position: center; }
+    </style>
+</head>
+<body>
+    <!-- HEADER - SAME DESIGN AS IPHONE PAGE -->
+    <body class="neon-theme">
+
+<header class="site-header">
+    <div class="header-container">
+
+        <!-- LOGO + MEMON APPLE iSTORE NAME -->
+        <a href="index.html" class="brand">
+
+            <img
+                src="images/Screenshot 2026-11-05 131459.png"
+                alt="MEMON APPLE iSTORE Logo"
+                class="brand-logo"
+            >
+
+           
+
+        </a>
+
+        <!-- NAVIGATION -->
+        <nav class="navigation" id="navigation">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="offers.html">New Offers</a>
+        </nav>
+
+        <!-- HEADER BUTTONS -->
+        <div class="header-actions">
+ 
+            <a href="login.html" class="login-btn">Login</a>
+
+            <a href="signup.html" class="signin-btn">Sign In</a>
+
+            <button class="menu-toggle" id="menu-toggle" type="button">
+                ☰
+            </button>
+
+        </div>
+    </div>
+   
+</header>
+ 
+    <!-- HERO -->
+    <section class="hero">
+        <h1>iPad Collection</h1>
+        <p>Explore Apple iPad models across Pro, Air, standard and mini families.</p>
+        <p class="small text-muted">Live product photos load from the internet.</p>
+        <p><span>Premium Design • Powerful Performance • Apple Experience</span></p>
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Search your favourite iPad... (e.g. Pro M5, Air, mini, 2024)" aria-label="Search iPad models">
+        </div>
+        <div class="live-note">Internet connection is required to load product photos.</div>
+    </section>
+
+    <!-- PRODUCTS -->
+    <section class="products-section">
+        <div class="section-heading">
+            <h2>Explore iPads</h2>
+            <p>Apple iPad models from 2010 to 2026</p>
+        </div>
+        <div class="filters">
+            <button class="filter-btn active" onclick="filterCategory('all', this)">All iPads</button>
+            <button class="filter-btn" onclick="filterCategory('pro', this)">Pro Models</button>
+            <button class="filter-btn" onclick="filterCategory('air', this)">Air Models</button>
+            <button class="filter-btn" onclick="filterCategory('standard', this)">Standard iPads</button>
+            <button class="filter-btn" onclick="filterCategory('mini', this)">iPad mini</button>
+        </div>
+        <div class="year-filter">
+            <label for="yearSelect"><strong>Year:</strong></label>
+            <select id="yearSelect" onchange="applyFilters()">
+                <option value="all">All Years (2010 - 2026)</option>
+                <option value="2026">2026</option><option value="2025">2025</option><option value="2024">2024</option><option value="2023">2023</option><option value="2022">2022</option><option value="2021">2021</option><option value="2020">2020</option><option value="2019">2019</option><option value="2018">2018</option><option value="2017">2017</option><option value="2016">2016</option><option value="2015">2015</option><option value="2014">2014</option><option value="2013">2013</option><option value="2012">2012</option><option value="2011">2011</option><option value="2010">2010</option>
+            </select>
+        </div>
+        <div class="result-count" id="resultCount">Showing 46 of 46 iPad model(s)</div>
+        <div class="container-fluid">
+            <div class="row g-4" id="productList">
+                    <div class="col-lg-3 col-md-6 product" data-category="pro" data-year="2025" data-name="ipad pro 13-inch (m5)" style="display: block;">
+                        <div class="product-card">
+                            <span class="product-badge">2025 Model</span>
+                            <div class="product-image">
+                                <img src="https://image.vandenborre.be/WEB/images/products/superzoom/apple_ipad-pro-m5-13-1tb-nt-spb_7647662_1.jpg" alt="iPad Pro 13-inch (M5) product photo" loading="lazy" referrerpolicy="no-referrer" onerror="usePhotoFallback(this, 'pro')">
+                            </div>
+                            <h3>iPad Pro 13-inch (M5)</h3>
+                            <p>Apple iPad • Introduced 2025</p>
+                            <div class="price">Price on Request</div>
+                            <div class="card-buttons">
+                                <button class="add-btn" type="button" data-add="iPad Pro 13-inch (M5)">ADD TO CART +</button>
+                                <button class="details-btn" type="button" data-details="iPad Pro 13-inch (M5)">VIEW DETAILS</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 product" data-category="pro" data-year="2025" data-name="ipad pro 11-inch (m5)" style="display: block;">
+                        <div class="product-card">
+                            <span class="product-badge">2025 Model</span>
+                            <div class="product-image">
+                                <img src="https://image.vandenborre.be/WEB/images/products/superzoom/apple_ipad-pro-m5-13-1tb-nt-spb_7647662_1.jpg" alt="iPad Pro 11-inch (M5) product photo" loading="lazy" referrerpolicy="no-referrer" onerror="usePhotoFallback(this, 'pro')">
+                            </div>
+                            <h3>iPad Pro 11-inch (M5)</h3>
+                            <p>Apple iPad • Introduced 2025</p>
+                            <div class="price">Price on Request</div>
+                            <div class="card-buttons">
+                                <button class="add-btn" type="button" data-add="iPad Pro 11-inch (M5)">ADD TO CART +</button>
+                                <button class="details-btn" type="button" data-details="iPad Pro 11-inch (M5)">VIEW DETAILS</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 product" data-category="air" data-year="2026" data-name="ipad air 13-inch (m4)" style="display: block;">
+                        <div class="product-card">
+                            <span class="product-badge">2026 Model</span>
+                            <div class="product-image">
+                                <img src="https://fdn2.gsmarena.com/vv/pics/apple/apple-ipad-air-11-2024-2.jpg" alt="iPad Air 13-inch (M4) product photo" loading="lazy" referrerpolicy="no-referrer" onerror="usePhotoFallback(this, 'air')">
+                            </div>
+                            <h3>iPad Air 13-inch (M4)</h3>
+                            <p>Apple iPad • Introduced 2026</p>
+                            <div class="price">Price on Request</div>
+                            <div class="card-buttons">
+                                <button class="add-btn" type="button" data-add="iPad Air 13-inch (M4)">ADD TO CART +</button>
+                                <button class="details-btn" type="button" data-details="iPad Air 13-inch (M4)">VIEW DETAILS</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 product" data-category="air" data-year="2026" data-name="ipad air 11-inch (m4)" style="display: block;">
+                        <div class="product-card">
+                            <span class="product-badge">2026 Model</span>
+                            <div class="product-image">
+                                <img src="https://fdn2.gsmarena.com/vv/pics/apple/apple-ipad-air-11-2024-2.jpg" alt="iPad Air 11-inch (M4) product photo" loading="lazy" referrerpolicy="no-referrer" onerror="usePhotoFallback(this, 'air')">
+                            </div>
+                            <h3>iPad Air 11-inch (M4)</h3>
+                            <p>Apple iPad • Introduced 2026</p>
+                            <div class="price">Price on Request</div>
+                            <div class="card-buttons">
+                                <button class="add-btn" type="button" data-add="iPad Air 11-inch (M4)">ADD TO CART +</button>
+                                <button class="details-btn" type="button" data-details="iPad Air 11-inch (M4)">VIEW DETAILS</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 product" data-category="standard" data-year="2025" data-name="ipad (a16)" style="display: block;">
+                        <div class="product-card">
+                            <span class="product-badge">2025 Model</span>
+                            <div class="product-image">
+                                <img src="https://cdn.shopify.com/s/files/1/0552/0883/7292/files/Ipad-11-a16-2.jpg?v=1742991204&amp;width=600" alt="iPad (A16) product photo" loading="lazy" referrerpolicy="no-referrer" onerror="usePhotoFallback(this, 'standard')">
+                            </div>
+                            <h3>iPad (A16)</h3>
+                            <p>Apple iPad • Introduced 2025</p>
+                            <div class="price">Price on Request</div>
+                            <div class="card-buttons">
+                                <button class="add-btn" type="button" data-add="iPad (A16)">ADD TO CART +</button>
+                                <button class="details-btn" type="button" data-details="iPad (A16)">VIEW DETAILS</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 product" data-category="mini" data-year="2026" data-name="ipad mini (a20 pro)" style="display: block;">
+                        <div class="product-card">
+                            <span class="product-badge preorder">Pre-Order • Launch Nov 6, 2026</span>
+                            <div class="product-image">
+                                <img src="https://fdn2.gsmarena.com/vv/pics/apple/ipad-mini-a20-pro-1.jpg" alt="iPad mini (A20 Pro) product photo" loading="lazy" referrerpolicy="no-referrer" onerror="usePhotoFallback(this, 'mini')">
+                            </div>
+                            <h3>iPad mini (A20 Pro)</h3>
+                            <p>New model • Pre-order listing</p>
+                            <div class="price">Price on Request</div>
+                            <div class="card-buttons">
+                                <button class="add-btn" type="button" data-add="iPad mini (A20 Pro)">ADD TO CART +</button>
+                                <button class="details-btn" type="button" data-details="iPad mini (A20 Pro)">VIEW DETAILS</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 product" data-category="pro" data-year="2024" data-name="ipad pro 13-inch (m4)" style="display: block;">
+                        <div class="product-card">
+                            <span class="product-badge">2024 Model</span>
+                            <div class="product-image">
+                                <img src="https://image.vandenborre.be/WEB/images/products/superzoom/apple_ipad-pro-m5-13-1tb-nt-spb_7647662_1.jpg" alt="iPad Pro 13-inch (M4) product photo" loading="lazy" referrerpolicy="no-referrer" onerror="usePhotoFallback(this, 'pro')">
+                            </div>
+                            <h3>iPad Pro 13-inch (M4)</h3>
+                            <p>Apple iPad • Introduced 2024</p>
+                            <div class="price">Price on Request</div>
+                            <div class="card-buttons">
+                                <button class="add-btn" type="button" data-add="iPad Pro 13-inch (M4)">ADD TO CART +</button>
+                                <button class="details-btn" type="button" data-details="iPad Pro 13-inch (M4)">VIEW DETAILS</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 product" data-category="pro" data-year="2022" data-name="ipad pro 12.9-inch (6th generation)" style="display: block;">
+                        <div class="product-card">
+                            <span class="product-badge">2022 Model</span>
+                            <div class="product-image">
+                                <img src="https://image.vandenborre.be/WEB/images/products/superzoom/apple_ipad-pro-m5-13-1tb-nt-spb_7647662_1.jpg" alt="iPad Pro 12.9-inch (6th generation) product photo" loading="lazy" referrerpolicy="no-referrer" onerror="usePhotoFallback(this, 'pro')">
+                            </div>
+                            <h3>iPad Pro 12.9-inch (6th generation)</h3>
+                            <p>Apple iPad • Introduced 2022</p>
+                            <div class="price">Price on Request</div>
+                            <div class="card-buttons">
+                                <button class="add-btn" type="button" data-add="iPad Pro 12.9-inch (6th generation)">ADD TO CART +</button>
+                                <button class="details-btn" type="button" data-details="iPad Pro 12.9-inch (6th generation)">VIEW DETAILS</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 product" data-category="pro" data-year="2021" data-name="ipad pro 12.9-inch (5th generation)" style="display: block;">
+                        <div class="product-card">
+                            <span class="product-badge">2021 Model</span>
+                            <div class="product-image">
+                                <img src="https://image.vandenborre.be/WEB/images/products/superzoom/apple_ipad-pro-m5-13-1tb-nt-spb_7647662_1.jpg" alt="iPad Pro 12.9-inch (5th generation) product photo" loading="lazy" referrerpolicy="no-referrer" onerror="usePhotoFallback(this, 'pro')">
+                            </div>
+                            <h3>iPad Pro 12.9-inch (5th generation)</h3>
+                            <p>Apple iPad • Introduced 2021</p>
+                            <div class="price">Price on Request</div>
+                            <div class="card-buttons">
+                                <button class="add-btn" type="button" data-add="iPad Pro 12.9-inch (5th generation)">ADD TO CART +</button>
+                                <button class="details-btn" type="button" data-details="iPad Pro 12.9-inch (5th generation)">VIEW DETAILS</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 product" data-category="pro" data-year="2020" data-name="ipad pro 12.9-inch (4th generation)" style="display: block;">
+                        <div class="product-card">
+                            <span class="product-badge">2020 Model</span>
+                            <div class="product-image">
+                                <img src="https://image.vandenborre.be/WEB/images/products/superzoom/apple_ipad-pro-m5-13-1tb-nt-spb_7647662_1.jpg" alt="iPad Pro 12.9-inch (4th generation) product photo" loading="lazy" referrerpolicy="no-referrer" onerror="usePhotoFallback(this, 'pro')">
+                            </div>
+                            <h3>iPad Pro 12.9-inch (4th generation)</h3>
+                            <p>Apple iPad • Introduced 2020</p>
+                            <div class="price">Price on Request</div>
+                            <div class="card-buttons">
+                                <button class="add-btn" type="button" data-add="iPad Pro 12.9-inch (4th generation)">ADD TO CART +</button>
+                                <button class="details-btn" type="button" data-details="iPad Pro 12.9-inch (4th generation)">VIEW DETAILS</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 product" data-category="pro" data-year="2018" data-name="ipad pro 12.9-inch (3rd generation)" style="display: block;">
+                        <div class="product-card">
+                            <span class="product-badge">2018 Model</span>
+                            <div class="product-image">
+                                <img src="https://image.vandenborre.be/WEB/images/products/superzoom/apple_ipad-pro-m5-13-1tb-nt-spb_7647662_1.jpg" alt="iPad Pro 12.9-inch (3rd generation) product photo" loading="lazy" referrerpolicy="no-referrer" onerror="usePhotoFallback(this, 'pro')">
+                            </div>
+                            <h3>iPad Pro 12.9-inch (3rd generation)</h3>
+                            <p>Apple iPad • Introduced 2018</p>
+                            <div class="price">Price on Request</div>
+                            <div class="card-buttons">
+                                <button class="add-btn" type="button" data-add="iPad Pro 12.9-inch (3rd generation)">ADD TO CART +</button>
+                                <button class="details-btn" type="button" data-details="iPad Pro 12.9-inch (3rd generation)">VIEW DETAILS</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 product" data-category="pro" data-year="2017" data-name="ipad pro 12.9-inch (2nd generation)" style="display: block;">
+                        <div class="product-card">
+                            <span class="product-badge">2017 Model</span>
+                            <div class="product-image">
+                                <img src="https://image.vandenborre.be/WEB/images/products/superzoom/apple_ipad-pro-m5-13-1tb-nt-spb_7647662_1.jpg" alt="iPad Pro 12.9-inch (2nd generation) product photo" loading="lazy" referrerpolicy="no-referrer" onerror="usePhotoFallback(this, 'pro')">
+                            </div>
+                            <h3>iPad Pro 12.9-inch (2nd generation)</h3>
+                            <p>Apple iPad • Introduced 2017</p>
+                            <div class="price">Price on Request</div>
+                            <div class="card-buttons">
+                                <button class="add-btn" type="button" data-add="iPad Pro 12.9-inch (2nd generation)">ADD TO CART +</button>
+                                <button class="details-btn" type="button" data-details="iPad Pro 12.9-inch (2nd generation)">VIEW DETAILS</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 product" data-category="pro" data-year="2015" data-name="ipad pro 12.9-inch (1st generation)" style="display: block;">
+                        <div class="product-card">
+                            <span class="product-badge">2015 Model</span>
+                            <div class="product-image">
+                                <img src="https://image.vandenborre.be/WEB/images/products/superzoom/apple_ipad-pro-m5-13-1tb-nt-spb_7647662_1.jpg" alt="iPad Pro 12.9-inch (1st generation) product photo" loading="lazy" referrerpolicy="no-referrer" onerror="usePhotoFallback(this, 'pro')">
+                            </div>
+                            <h3>iPad Pro 12.9-inch (1st generation)</h3>
+                            <p>Apple iPad • Introduced 2015</p>
+                            <div class="price">Price on Request</div>
+                            <div class="card-buttons">
+                                <button class="add-btn" type="button" data-add="iPad Pro 12.9-inch (1st generation)">ADD TO CART +</button>
+                                <button class="details-btn" type="button" data-details="iPad Pro 12.9-inch (1st generation)">VIEW DETAILS</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 product" data-category="pro" data-year="2024" data-name="ipad pro 11-inch (m4)" style="display: block;">
+                        <div class="product-card">
+                            <span class="product-badge">2024 Model</span>
+                            <div class="product-image">
+                                <img src="https://image.vandenborre.be/WEB/images/products/superzoom/apple_ipad-pro-m5-13-1tb-nt-spb_7647662_1.jpg" alt="iPad Pro 11-inch (M4) product photo" loading="lazy" referrerpolicy="no-referrer" onerror="usePhotoFallback(this, 'pro')">
+                            </div>
+                            <h3>iPad Pro 11-inch (M4)</h3>
+                            <p>Apple iPad • Introduced 2024</p>
+                            <div class="price">Price on Request</div>
+                            <div class="card-buttons">
+                                <button class="add-btn" type="button" data-add="iPad Pro 11-inch (M4)">ADD TO CART +</button>
+                                <button class="details-btn" type="button" data-details="iPad Pro 11-inch (M4)">VIEW DETAILS</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 product" data-category="pro" data-year="2022" data-name="ipad pro 11-inch (4th generation)" style="display: block;">
+                        <div class="product-card">
+                            <span class="product-badge">2022 Model</span>
+                            <div class="product-image">
+                                <img src="https://image.vandenborre.be/WEB/images/products/superzoom/apple_ipad-pro-m5-13-1tb-nt-spb_7647662_1.jpg" alt="iPad Pro 11-inch (4th generation) product photo" loading="lazy" referrerpolicy="no-referrer" onerror="usePhotoFallback(this, 'pro')">
+                            </div>
+                            <h3>iPad Pro 11-inch (4th generation)</h3>
+                            <p>Apple iPad • Introduced 2022</p>
+                            <div class="price">Price on Request</div>
+                            <div class="card-buttons">
+                                <button class="add-btn" type="button" data-add="iPad Pro 11-inch (4th generation)">ADD TO CART +</button>
+                                <button class="details-btn" type="button" data-details="iPad Pro 11-inch (4th generation)">VIEW DETAILS</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 product" data-category="pro" data-year="2021" data-name="ipad pro 11-inch (3rd generation)" style="display: block;">
+                        <div class="product-card">
+                            <span class="product-badge">2021 Model</span>
+                            <div class="product-image">
+                                <img src="https://image.vandenborre.be/WEB/images/products/superzoom/apple_ipad-pro-m5-13-1tb-nt-spb_7647662_1.jpg" alt="iPad Pro 11-inch (3rd generation) product photo" loading="lazy" referrerpolicy="no-referrer" onerror="usePhotoFallback(this, 'pro')">
+                            </div>
+                            <h3>iPad Pro 11-inch (3rd generation)</h3>
+                            <p>Apple iPad • Introduced 2021</p>
+                            <div class="price">Price on Request</div>
+                            <div class="card-buttons">
+                                <button class="add-btn" type="button" data-add="iPad Pro 11-inch (3rd generation)">ADD TO CART +</button>
+                                <button class="details-btn" type="button" data-details="iPad Pro 11-inch (3rd generation)">VIEW DETAILS</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 product" data-category="pro" data-year="2020" data-name="ipad pro 11-inch (2nd generation)" style="display: block;">
+                        <div class="product-card">
+                            <span class="product-badge">2020 Model</span>
+                            <div class="product-image">
+                                <img src="https://image.vandenborre.be/WEB/images/products/superzoom/apple_ipad-pro-m5-13-1tb-nt-spb_7647662_1.jpg" alt="iPad Pro 11-inch (2nd generation) product photo" loading="lazy" referrerpolicy="no-referrer" onerror="usePhotoFallback(this, 'pro')">
+                            </div>
+                            <h3>iPad Pro 11-inch (2nd generation)</h3>
+                            <p>Apple iPad • Introduced 2020</p>
+                            <div class="price">Price on Request</div>
+                            <div class="card-buttons">
+                                <button class="add-btn" type="button" data-add="iPad Pro 11-inch (2nd generation)">ADD TO CART +</button>
+                                <button class="details-btn" type="button" data-details="iPad Pro 11-inch (2nd generation)">VIEW DETAILS</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 product" data-category="pro" data-year="2018" data-name="ipad pro 11-inch (1st generation)" style="display: block;">
+                        <div class="product-card">
+                            <span class="product-badge">2018 Model</span>
+                            <div class="product-image">
+                                <img src="https://image.vandenborre.be/WEB/images/products/superzoom/apple_ipad-pro-m5-13-1tb-nt-spb_7647662_1.jpg" alt="iPad Pro 11-inch (1st generation) product photo" loading="lazy" referrerpolicy="no-referrer" onerror="usePhotoFallback(this, 'pro')">
+                            </div>
+                            <h3>iPad Pro 11-inch (1st generation)</h3>
+                            <p>Apple iPad • Introduced 2018</p>
+                            <div class="price">Price on Request</div>
+                            <div class="card-buttons">
+                                <button class="add-btn" type="button" data-add="iPad Pro 11-inch (1st generation)">ADD TO CART +</button>
+                                <button class="details-btn" type="button" data-details="iPad Pro 11-inch (1st generation)">VIEW DETAILS</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 product" data-category="pro" data-year="2017" data-name="ipad pro 10.5-inch" style="display: block;">
+                        <div class="product-card">
+                            <span class="product-badge">2017 Model</span>
+                            <div class="product-image">
+                                <img src="https://image.vandenborre.be/WEB/images/products/superzoom/apple_ipad-pro-m5-13-1tb-nt-spb_7647662_1.jpg" alt="iPad Pro 10.5-inch product photo" loading="lazy" referrerpolicy="no-referrer" onerror="usePhotoFallback(this, 'pro')">
+                            </div>
+                            <h3>iPad Pro 10.5-inch</h3>
+                            <p>Apple iPad • Introduced 2017</p>
+                            <div class="price">Price on Request</div>
+                            <div class="card-buttons">
+                                <button class="add-btn" type="button" data-add="iPad Pro 10.5-inch">ADD TO CART +</button>
+                                <button class="details-btn" type="button" data-details="iPad Pro 10.5-inch">VIEW DETAILS</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 product" data-category="pro" data-year="2016" data-name="ipad pro 9.7-inch" style="display: block;">
+                        <div class="product-card">
+                            <span class="product-badge">2016 Model</span>
+                            <div class="product-image">
+                                <img src="https://image.vandenborre.be/WEB/images/products/superzoom/apple_ipad-pro-m5-13-1tb-nt-spb_7647662_1.jpg" alt="iPad Pro 9.7-inch product photo" loading="lazy" referrerpolicy="no-referrer" onerror="usePhotoFallback(this, 'pro')">
+                            </div>
+                            <h3>iPad Pro 9.7-inch</h3>
+                            <p>Apple iPad • Introduced 2016</p>
+                            <div class="price">Price on Request</div>
+                            <div class="card-buttons">
+                                <button class="add-btn" type="button" data-add="iPad Pro 9.7-inch">ADD TO CART +</button>
+                                <button class="details-btn" type="button" data-details="iPad Pro 9.7-inch">VIEW DETAILS</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 product" data-category="air" data-year="2025" data-name="ipad air 13-inch (m3)" style="display: block;">
+                        <div class="product-card">
+                            <span class="product-badge">2025 Model</span>
+                            <div class="product-image">
+                                <img src="https://fdn2.gsmarena.com/vv/pics/apple/apple-ipad-air-11-2024-2.jpg" alt="iPad Air 13-inch (M3) product photo" loading="lazy" referrerpolicy="no-referrer" onerror="usePhotoFallback(this, 'air')">
+                            </div>
+                            <h3>iPad Air 13-inch (M3)</h3>
+                            <p>Apple iPad • Introduced 2025</p>
+                            <div class="price">Price on Request</div>
+                            <div class="card-buttons">
+                                <button class="add-btn" type="button" data-add="iPad Air 13-inch (M3)">ADD TO CART +</button>
+                                <button class="details-btn" type="button" data-details="iPad Air 13-inch (M3)">VIEW DETAILS</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 product" data-category="air" data-year="2025" data-name="ipad air 11-inch (m3)" style="display: block;">
+                        <div class="product-card">
+                            <span class="product-badge">2025 Model</span>
+                            <div class="product-image">
+                                <img src="https://fdn2.gsmarena.com/vv/pics/apple/apple-ipad-air-11-2024-2.jpg" alt="iPad Air 11-inch (M3) product photo" loading="lazy" referrerpolicy="no-referrer" onerror="usePhotoFallback(this, 'air')">
+                            </div>
+                            <h3>iPad Air 11-inch (M3)</h3>
+                            <p>Apple iPad • Introduced 2025</p>
+                            <div class="price">Price on Request</div>
+                            <div class="card-buttons">
+                                <button class="add-btn" type="button" data-add="iPad Air 11-inch (M3)">ADD TO CART +</button>
+                                <button class="details-btn" type="button" data-details="iPad Air 11-inch (M3)">VIEW DETAILS</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 product" data-category="air" data-year="2024" data-name="ipad air 13-inch (m2)" style="display: block;">
+                        <div class="product-card">
+                            <span class="product-badge">2024 Model</span>
+                            <div class="product-image">
+                                <img src="https://fdn2.gsmarena.com/vv/pics/apple/apple-ipad-air-11-2024-2.jpg" alt="iPad Air 13-inch (M2) product photo" loading="lazy" referrerpolicy="no-referrer" onerror="usePhotoFallback(this, 'air')">
+                            </div>
+                            <h3>iPad Air 13-inch (M2)</h3>
+                            <p>Apple iPad • Introduced 2024</p>
+                            <div class="price">Price on Request</div>
+                            <div class="card-buttons">
+                                <button class="add-btn" type="button" data-add="iPad Air 13-inch (M2)">ADD TO CART +</button>
+                                <button class="details-btn" type="button" data-details="iPad Air 13-inch (M2)">VIEW DETAILS</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 product" data-category="air" data-year="2024" data-name="ipad air 11-inch (m2)" style="display: block;">
+                        <div class="product-card">
+                            <span class="product-badge">2024 Model</span>
+                            <div class="product-image">
+                                <img src="https://fdn2.gsmarena.com/vv/pics/apple/apple-ipad-air-11-2024-2.jpg" alt="iPad Air 11-inch (M2) product photo" loading="lazy" referrerpolicy="no-referrer" onerror="usePhotoFallback(this, 'air')">
+                            </div>
+                            <h3>iPad Air 11-inch (M2)</h3>
+                            <p>Apple iPad • Introduced 2024</p>
+                            <div class="price">Price on Request</div>
+                            <div class="card-buttons">
+                                <button class="add-btn" type="button" data-add="iPad Air 11-inch (M2)">ADD TO CART +</button>
+                                <button class="details-btn" type="button" data-details="iPad Air 11-inch (M2)">VIEW DETAILS</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 product" data-category="air" data-year="2022" data-name="ipad air (5th generation)" style="display: block;">
+                        <div class="product-card">
+                            <span class="product-badge">2022 Model</span>
+                            <div class="product-image">
+                                <img src="https://fdn2.gsmarena.com/vv/pics/apple/apple-ipad-air-11-2024-2.jpg" alt="iPad Air (5th generation) product photo" loading="lazy" referrerpolicy="no-referrer" onerror="usePhotoFallback(this, 'air')">
+                            </div>
+                            <h3>iPad Air (5th generation)</h3>
+                            <p>Apple iPad • Introduced 2022</p>
+                            <div class="price">Price on Request</div>
+                            <div class="card-buttons">
+                                <button class="add-btn" type="button" data-add="iPad Air (5th generation)">ADD TO CART +</button>
+                                <button class="details-btn" type="button" data-details="iPad Air (5th generation)">VIEW DETAILS</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 product" data-category="air" data-year="2020" data-name="ipad air (4th generation)" style="display: block;">
+                        <div class="product-card">
+                            <span class="product-badge">2020 Model</span>
+                            <div class="product-image">
+                                <img src="https://fdn2.gsmarena.com/vv/pics/apple/apple-ipad-air-11-2024-2.jpg" alt="iPad Air (4th generation) product photo" loading="lazy" referrerpolicy="no-referrer" onerror="usePhotoFallback(this, 'air')">
+                            </div>
+                            <h3>iPad Air (4th generation)</h3>
+                            <p>Apple iPad • Introduced 2020</p>
+                            <div class="price">Price on Request</div>
+                            <div class="card-buttons">
+                                <button class="add-btn" type="button" data-add="iPad Air (4th generation)">ADD TO CART +</button>
+                                <button class="details-btn" type="button" data-details="iPad Air (4th generation)">VIEW DETAILS</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 product" data-category="air" data-year="2019" data-name="ipad air (3rd generation)" style="display: block;">
+                        <div class="product-card">
+                            <span class="product-badge">2019 Model</span>
+                            <div class="product-image">
+                                <img src="https://fdn2.gsmarena.com/vv/pics/apple/apple-ipad-air-11-2024-2.jpg" alt="iPad Air (3rd generation) product photo" loading="lazy" referrerpolicy="no-referrer" onerror="usePhotoFallback(this, 'air')">
+                            </div>
+                            <h3>iPad Air (3rd generation)</h3>
+                            <p>Apple iPad • Introduced 2019</p>
+                            <div class="price">Price on Request</div>
+                            <div class="card-buttons">
+                                <button class="add-btn" type="button" data-add="iPad Air (3rd generation)">ADD TO CART +</button>
+                                <button class="details-btn" type="button" data-details="iPad Air (3rd generation)">VIEW DETAILS</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 product" data-category="air" data-year="2014" data-name="ipad air 2" style="display: block;">
+                        <div class="product-card">
+                            <span class="product-badge">2014 Model</span>
+                            <div class="product-image">
+                                <img src="https://fdn2.gsmarena.com/vv/pics/apple/apple-ipad-air-11-2024-2.jpg" alt="iPad Air 2 product photo" loading="lazy" referrerpolicy="no-referrer" onerror="usePhotoFallback(this, 'air')">
+                            </div>
+                            <h3>iPad Air 2</h3>
+                            <p>Apple iPad • Introduced 2014</p>
+                            <div class="price">Price on Request</div>
+                            <div class="card-buttons">
+                                <button class="add-btn" type="button" data-add="iPad Air 2">ADD TO CART +</button>
+                                <button class="details-btn" type="button" data-details="iPad Air 2">VIEW DETAILS</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 product" data-category="air" data-year="2013" data-name="ipad air (1st generation)" style="display: block;">
+                        <div class="product-card">
+                            <span class="product-badge">2013 Model</span>
+                            <div class="product-image">
+                                <img src="https://fdn2.gsmarena.com/vv/pics/apple/apple-ipad-air-11-2024-2.jpg" alt="iPad Air (1st generation) product photo" loading="lazy" referrerpolicy="no-referrer" onerror="usePhotoFallback(this, 'air')">
+                            </div>
+                            <h3>iPad Air (1st generation)</h3>
+                            <p>Apple iPad • Introduced 2013</p>
+                            <div class="price">Price on Request</div>
+                            <div class="card-buttons">
+                                <button class="add-btn" type="button" data-add="iPad Air (1st generation)">ADD TO CART +</button>
+                                <button class="details-btn" type="button" data-details="iPad Air (1st generation)">VIEW DETAILS</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 product" data-category="standard" data-year="2022" data-name="ipad (10th generation)" style="display: block;">
+                        <div class="product-card">
+                            <span class="product-badge">2022 Model</span>
+                            <div class="product-image">
+                                <img src="https://cdn.shopify.com/s/files/1/0552/0883/7292/files/Ipad-11-a16-2.jpg?v=1742991204&amp;width=600" alt="iPad (10th generation) product photo" loading="lazy" referrerpolicy="no-referrer" onerror="usePhotoFallback(this, 'standard')">
+                            </div>
+                            <h3>iPad (10th generation)</h3>
+                            <p>Apple iPad • Introduced 2022</p>
+                            <div class="price">Price on Request</div>
+                            <div class="card-buttons">
+                                <button class="add-btn" type="button" data-add="iPad (10th generation)">ADD TO CART +</button>
+                                <button class="details-btn" type="button" data-details="iPad (10th generation)">VIEW DETAILS</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 product" data-category="standard" data-year="2021" data-name="ipad (9th generation)" style="display: block;">
+                        <div class="product-card">
+                            <span class="product-badge">2021 Model</span>
+                            <div class="product-image">
+                                <img src="https://cdn.shopify.com/s/files/1/0552/0883/7292/files/Ipad-11-a16-2.jpg?v=1742991204&amp;width=600" alt="iPad (9th generation) product photo" loading="lazy" referrerpolicy="no-referrer" onerror="usePhotoFallback(this, 'standard')">
+                            </div>
+                            <h3>iPad (9th generation)</h3>
+                            <p>Apple iPad • Introduced 2021</p>
+                            <div class="price">Price on Request</div>
+                            <div class="card-buttons">
+                                <button class="add-btn" type="button" data-add="iPad (9th generation)">ADD TO CART +</button>
+                                <button class="details-btn" type="button" data-details="iPad (9th generation)">VIEW DETAILS</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 product" data-category="standard" data-year="2020" data-name="ipad (8th generation)" style="display: block;">
+                        <div class="product-card">
+                            <span class="product-badge">2020 Model</span>
+                            <div class="product-image">
+                                <img src="https://cdn.shopify.com/s/files/1/0552/0883/7292/files/Ipad-11-a16-2.jpg?v=1742991204&amp;width=600" alt="iPad (8th generation) product photo" loading="lazy" referrerpolicy="no-referrer" onerror="usePhotoFallback(this, 'standard')">
+                            </div>
+                            <h3>iPad (8th generation)</h3>
+                            <p>Apple iPad • Introduced 2020</p>
+                            <div class="price">Price on Request</div>
+                            <div class="card-buttons">
+                                <button class="add-btn" type="button" data-add="iPad (8th generation)">ADD TO CART +</button>
+                                <button class="details-btn" type="button" data-details="iPad (8th generation)">VIEW DETAILS</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 product" data-category="standard" data-year="2019" data-name="ipad (7th generation)" style="display: block;">
+                        <div class="product-card">
+                            <span class="product-badge">2019 Model</span>
+                            <div class="product-image">
+                                <img src="https://cdn.shopify.com/s/files/1/0552/0883/7292/files/Ipad-11-a16-2.jpg?v=1742991204&amp;width=600" alt="iPad (7th generation) product photo" loading="lazy" referrerpolicy="no-referrer" onerror="usePhotoFallback(this, 'standard')">
+                            </div>
+                            <h3>iPad (7th generation)</h3>
+                            <p>Apple iPad • Introduced 2019</p>
+                            <div class="price">Price on Request</div>
+                            <div class="card-buttons">
+                                <button class="add-btn" type="button" data-add="iPad (7th generation)">ADD TO CART +</button>
+                                <button class="details-btn" type="button" data-details="iPad (7th generation)">VIEW DETAILS</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 product" data-category="standard" data-year="2018" data-name="ipad (6th generation)" style="display: block;">
+                        <div class="product-card">
+                            <span class="product-badge">2018 Model</span>
+                            <div class="product-image">
+                                <img src="https://cdn.shopify.com/s/files/1/0552/0883/7292/files/Ipad-11-a16-2.jpg?v=1742991204&amp;width=600" alt="iPad (6th generation) product photo" loading="lazy" referrerpolicy="no-referrer" onerror="usePhotoFallback(this, 'standard')">
+                            </div>
+                            <h3>iPad (6th generation)</h3>
+                            <p>Apple iPad • Introduced 2018</p>
+                            <div class="price">Price on Request</div>
+                            <div class="card-buttons">
+                                <button class="add-btn" type="button" data-add="iPad (6th generation)">ADD TO CART +</button>
+                                <button class="details-btn" type="button" data-details="iPad (6th generation)">VIEW DETAILS</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 product" data-category="standard" data-year="2017" data-name="ipad (5th generation)" style="display: block;">
+                        <div class="product-card">
+                            <span class="product-badge">2017 Model</span>
+                            <div class="product-image">
+                                <img src="https://cdn.shopify.com/s/files/1/0552/0883/7292/files/Ipad-11-a16-2.jpg?v=1742991204&amp;width=600" alt="iPad (5th generation) product photo" loading="lazy" referrerpolicy="no-referrer" onerror="usePhotoFallback(this, 'standard')">
+                            </div>
+                            <h3>iPad (5th generation)</h3>
+                            <p>Apple iPad • Introduced 2017</p>
+                            <div class="price">Price on Request</div>
+                            <div class="card-buttons">
+                                <button class="add-btn" type="button" data-add="iPad (5th generation)">ADD TO CART +</button>
+                                <button class="details-btn" type="button" data-details="iPad (5th generation)">VIEW DETAILS</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 product" data-category="standard" data-year="2012" data-name="ipad (4th generation)" style="display: block;">
+                        <div class="product-card">
+                            <span class="product-badge">2012 Model</span>
+                            <div class="product-image">
+                                <img src="https://cdn.shopify.com/s/files/1/0552/0883/7292/files/Ipad-11-a16-2.jpg?v=1742991204&amp;width=600" alt="iPad (4th generation) product photo" loading="lazy" referrerpolicy="no-referrer" onerror="usePhotoFallback(this, 'standard')">
+                            </div>
+                            <h3>iPad (4th generation)</h3>
+                            <p>Apple iPad • Introduced 2012</p>
+                            <div class="price">Price on Request</div>
+                            <div class="card-buttons">
+                                <button class="add-btn" type="button" data-add="iPad (4th generation)">ADD TO CART +</button>
+                                <button class="details-btn" type="button" data-details="iPad (4th generation)">VIEW DETAILS</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 product" data-category="standard" data-year="2012" data-name="ipad (3rd generation)" style="display: block;">
+                        <div class="product-card">
+                            <span class="product-badge">2012 Model</span>
+                            <div class="product-image">
+                                <img src="https://cdn.shopify.com/s/files/1/0552/0883/7292/files/Ipad-11-a16-2.jpg?v=1742991204&amp;width=600" alt="iPad (3rd generation) product photo" loading="lazy" referrerpolicy="no-referrer" onerror="usePhotoFallback(this, 'standard')">
+                            </div>
+                            <h3>iPad (3rd generation)</h3>
+                            <p>Apple iPad • Introduced 2012</p>
+                            <div class="price">Price on Request</div>
+                            <div class="card-buttons">
+                                <button class="add-btn" type="button" data-add="iPad (3rd generation)">ADD TO CART +</button>
+                                <button class="details-btn" type="button" data-details="iPad (3rd generation)">VIEW DETAILS</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 product" data-category="standard" data-year="2011" data-name="ipad 2" style="display: block;">
+                        <div class="product-card">
+                            <span class="product-badge">2011 Model</span>
+                            <div class="product-image">
+                                <img src="https://cdn.shopify.com/s/files/1/0552/0883/7292/files/Ipad-11-a16-2.jpg?v=1742991204&amp;width=600" alt="iPad 2 product photo" loading="lazy" referrerpolicy="no-referrer" onerror="usePhotoFallback(this, 'standard')">
+                            </div>
+                            <h3>iPad 2</h3>
+                            <p>Apple iPad • Introduced 2011</p>
+                            <div class="price">Price on Request</div>
+                            <div class="card-buttons">
+                                <button class="add-btn" type="button" data-add="iPad 2">ADD TO CART +</button>
+                                <button class="details-btn" type="button" data-details="iPad 2">VIEW DETAILS</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 product" data-category="standard" data-year="2010" data-name="original ipad" style="display: block;">
+                        <div class="product-card">
+                            <span class="product-badge">2010 Model</span>
+                            <div class="product-image">
+                                <img src="https://cdn.shopify.com/s/files/1/0552/0883/7292/files/Ipad-11-a16-2.jpg?v=1742991204&amp;width=600" alt="Original iPad product photo" loading="lazy" referrerpolicy="no-referrer" onerror="usePhotoFallback(this, 'standard')">
+                            </div>
+                            <h3>Original iPad</h3>
+                            <p>Apple iPad • Introduced 2010</p>
+                            <div class="price">Price on Request</div>
+                            <div class="card-buttons">
+                                <button class="add-btn" type="button" data-add="Original iPad">ADD TO CART +</button>
+                                <button class="details-btn" type="button" data-details="Original iPad">VIEW DETAILS</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 product" data-category="mini" data-year="2024" data-name="ipad mini (a17 pro)" style="display: block;">
+                        <div class="product-card">
+                            <span class="product-badge">2024 Model</span>
+                            <div class="product-image">
+                                <img src="https://fdn2.gsmarena.com/vv/pics/apple/ipad-mini-a20-pro-1.jpg" alt="iPad mini (A17 Pro) product photo" loading="lazy" referrerpolicy="no-referrer" onerror="usePhotoFallback(this, 'mini')">
+                            </div>
+                            <h3>iPad mini (A17 Pro)</h3>
+                            <p>Apple iPad • Introduced 2024</p>
+                            <div class="price">Price on Request</div>
+                            <div class="card-buttons">
+                                <button class="add-btn" type="button" data-add="iPad mini (A17 Pro)">ADD TO CART +</button>
+                                <button class="details-btn" type="button" data-details="iPad mini (A17 Pro)">VIEW DETAILS</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 product" data-category="mini" data-year="2021" data-name="ipad mini (6th generation)" style="display: block;">
+                        <div class="product-card">
+                            <span class="product-badge">2021 Model</span>
+                            <div class="product-image">
+                                <img src="https://fdn2.gsmarena.com/vv/pics/apple/ipad-mini-a20-pro-1.jpg" alt="iPad mini (6th generation) product photo" loading="lazy" referrerpolicy="no-referrer" onerror="usePhotoFallback(this, 'mini')">
+                            </div>
+                            <h3>iPad mini (6th generation)</h3>
+                            <p>Apple iPad • Introduced 2021</p>
+                            <div class="price">Price on Request</div>
+                            <div class="card-buttons">
+                                <button class="add-btn" type="button" data-add="iPad mini (6th generation)">ADD TO CART +</button>
+                                <button class="details-btn" type="button" data-details="iPad mini (6th generation)">VIEW DETAILS</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 product" data-category="mini" data-year="2019" data-name="ipad mini (5th generation)" style="display: block;">
+                        <div class="product-card">
+                            <span class="product-badge">2019 Model</span>
+                            <div class="product-image">
+                                <img src="https://fdn2.gsmarena.com/vv/pics/apple/ipad-mini-a20-pro-1.jpg" alt="iPad mini (5th generation) product photo" loading="lazy" referrerpolicy="no-referrer" onerror="usePhotoFallback(this, 'mini')">
+                            </div>
+                            <h3>iPad mini (5th generation)</h3>
+                            <p>Apple iPad • Introduced 2019</p>
+                            <div class="price">Price on Request</div>
+                            <div class="card-buttons">
+                                <button class="add-btn" type="button" data-add="iPad mini (5th generation)">ADD TO CART +</button>
+                                <button class="details-btn" type="button" data-details="iPad mini (5th generation)">VIEW DETAILS</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 product" data-category="mini" data-year="2015" data-name="ipad mini 4" style="display: block;">
+                        <div class="product-card">
+                            <span class="product-badge">2015 Model</span>
+                            <div class="product-image">
+                                <img src="https://fdn2.gsmarena.com/vv/pics/apple/ipad-mini-a20-pro-1.jpg" alt="iPad mini 4 product photo" loading="lazy" referrerpolicy="no-referrer" onerror="usePhotoFallback(this, 'mini')">
+                            </div>
+                            <h3>iPad mini 4</h3>
+                            <p>Apple iPad • Introduced 2015</p>
+                            <div class="price">Price on Request</div>
+                            <div class="card-buttons">
+                                <button class="add-btn" type="button" data-add="iPad mini 4">ADD TO CART +</button>
+                                <button class="details-btn" type="button" data-details="iPad mini 4">VIEW DETAILS</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 product" data-category="mini" data-year="2014" data-name="ipad mini 3" style="display: block;">
+                        <div class="product-card">
+                            <span class="product-badge">2014 Model</span>
+                            <div class="product-image">
+                                <img src="https://fdn2.gsmarena.com/vv/pics/apple/ipad-mini-a20-pro-1.jpg" alt="iPad mini 3 product photo" loading="lazy" referrerpolicy="no-referrer" onerror="usePhotoFallback(this, 'mini')">
+                            </div>
+                            <h3>iPad mini 3</h3>
+                            <p>Apple iPad • Introduced 2014</p>
+                            <div class="price">Price on Request</div>
+                            <div class="card-buttons">
+                                <button class="add-btn" type="button" data-add="iPad mini 3">ADD TO CART +</button>
+                                <button class="details-btn" type="button" data-details="iPad mini 3">VIEW DETAILS</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 product" data-category="mini" data-year="2013" data-name="ipad mini 2" style="display: block;">
+                        <div class="product-card">
+                            <span class="product-badge">2013 Model</span>
+                            <div class="product-image">
+                                <img src="https://fdn2.gsmarena.com/vv/pics/apple/ipad-mini-a20-pro-1.jpg" alt="iPad mini 2 product photo" loading="lazy" referrerpolicy="no-referrer" onerror="usePhotoFallback(this, 'mini')">
+                            </div>
+                            <h3>iPad mini 2</h3>
+                            <p>Apple iPad • Introduced 2013</p>
+                            <div class="price">Price on Request</div>
+                            <div class="card-buttons">
+                                <button class="add-btn" type="button" data-add="iPad mini 2">ADD TO CART +</button>
+                                <button class="details-btn" type="button" data-details="iPad mini 2">VIEW DETAILS</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 product" data-category="mini" data-year="2012" data-name="ipad mini (1st generation)" style="display: block;">
+                        <div class="product-card">
+                            <span class="product-badge">2012 Model</span>
+                            <div class="product-image">
+                                <img src="https://fdn2.gsmarena.com/vv/pics/apple/ipad-mini-a20-pro-1.jpg" alt="iPad mini (1st generation) product photo" loading="lazy" referrerpolicy="no-referrer" onerror="usePhotoFallback(this, 'mini')">
+                            </div>
+                            <h3>iPad mini (1st generation)</h3>
+                            <p>Apple iPad • Introduced 2012</p>
+                            <div class="price">Price on Request</div>
+                            <div class="card-buttons">
+                                <button class="add-btn" type="button" data-add="iPad mini (1st generation)">ADD TO CART +</button>
+                                <button class="details-btn" type="button" data-details="iPad mini (1st generation)">VIEW DETAILS</button>
+                            </div>
+                        </div>
+                    </div></div>
+            <div class="no-results" id="noResults" style="display: none;"><h4>No iPads match your filters.</h4></div>
+        </div>
+    </section>
+
+    <footer class="vip-footer">
+
+    <div class="footer-container">
+
+        <!-- BRAND INFORMATION -->
+        <div class="footer-column footer-brand">
+
+            <div class="footer-logo">
+                <img src="images/Screenshot 2026-11-05 131459.png"
+                     alt="MEMON APPLE iSTORE Logo"
+                     class="footer-round-logo">
+
+                
+            </div>
+
+            <p>
+                Discover premium Apple products with
+                elegant design, quality and exceptional
+                customer service.
+            </p>
+
+            <!-- SOCIAL LINKS -->
+            <div class="footer-social">
+
+                <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+
+                <a href="https://www.whatsapp.com/" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- QUICK LINKS -->
+        <div class="footer-column">
+            <h3>Quick Links</h3>
+
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="offers.html">New Offers</a></li>
+           
+            </ul>
+        </div>
+
+
+        <!-- PRODUCTS -->
+        <div class="footer-column">
+            <h3>Our Products</h3>
+
+            <ul>
+                <li><a href="iphones.html">iPhone</a></li>
+                <li><a href="macbooks.html">MacBook</a></li>
+                <li><a href="ipads.html">iPad</a></li>
+                <li><a href="watches.html">Apple Watch</a></li>
+                <li><a href="airpods.html">AirPods</a></li>
+                <li><a href="accessories.html">Accessories</a></li>
+            </ul>
+        </div>
+
+
+        <!-- CUSTOMER SUPPORT -->
+        <div class="footer-column">
+            <h3>Customer Support</h3>
+
+            <ul>
+                <li><a href="Privacy Policy.html">Privacy Policy</a></li>
+
+                <li><a href="Terms and Conditions.html">Terms and Conditions</a></li>
+              
+                <li><a href="Refund and Returns.html">Refund and Returns</a></li>
+
+                <li><a href="login.html">My Account</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+
+    <!-- NEWSLETTER -->
+    <div class="footer-newsletter">
+
+        <div>
+            <h3>Stay Connected With Us</h3>
+            <p>Subscribe for updates about our latest collections.</p>
+        </div>
+
+        <form class="newsletter-form" id="newsletterForm">
+            <input type="email"
+                   placeholder="Enter your email address"
+                   required>
+
+            <button type="submit">Subscribe</button>
+        </form>
+
+    </div>
+
+
+    <!-- FOOTER BOTTOM -->
+    <div class="footer-bottom">
+
+        <p>
+            © <span id="footerYear"></span>
+            MEMON APPLE iSTORE. All Rights Reserved.
+        </p>
+
+        <div class="footer-bottom-links">
+            <a href="Privacy Policy.html">Privacy Policy</a>
+            <a href="Shipping Policy.html">Shipping Policy</a>
+
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <button id="backToTop" class="back-to-top"
+                aria-label="Back to top">
+            <i class="fa-solid fa-arrow-up"></i>
+        </button>
+
+    </div>
+
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const ipadModels = [{"name":"iPad Pro 13-inch (M5)","year":2025,"category":"pro","photo":"https://image.vandenborre.be/WEB/images/products/superzoom/apple_ipad-pro-m5-13-1tb-nt-spb_7647662_1.jpg","preOrder":false},{"name":"iPad Pro 11-inch (M5)","year":2025,"category":"pro","photo":"https://image.vandenborre.be/WEB/images/products/superzoom/apple_ipad-pro-m5-13-1tb-nt-spb_7647662_1.jpg","preOrder":false},{"name":"iPad Air 13-inch (M4)","year":2026,"category":"air","photo":"https://fdn2.gsmarena.com/vv/pics/apple/apple-ipad-air-11-2024-2.jpg","preOrder":false},{"name":"iPad Air 11-inch (M4)","year":2026,"category":"air","photo":"https://fdn2.gsmarena.com/vv/pics/apple/apple-ipad-air-11-2024-2.jpg","preOrder":false},{"name":"iPad (A16)","year":2025,"category":"standard","photo":"https://cdn.shopify.com/s/files/1/0552/0883/7292/files/Ipad-11-a16-2.jpg?v=1742991204&width=600","preOrder":false},{"name":"iPad mini (A20 Pro)","year":2026,"category":"mini","photo":"https://fdn2.gsmarena.com/vv/pics/apple/ipad-mini-a20-pro-1.jpg","preOrder":true},{"name":"iPad Pro 13-inch (M4)","year":2024,"category":"pro","photo":"https://image.vandenborre.be/WEB/images/products/superzoom/apple_ipad-pro-m5-13-1tb-nt-spb_7647662_1.jpg","preOrder":false},{"name":"iPad Pro 12.9-inch (6th generation)","year":2022,"category":"pro","photo":"https://image.vandenborre.be/WEB/images/products/superzoom/apple_ipad-pro-m5-13-1tb-nt-spb_7647662_1.jpg","preOrder":false},{"name":"iPad Pro 12.9-inch (5th generation)","year":2021,"category":"pro","photo":"https://image.vandenborre.be/WEB/images/products/superzoom/apple_ipad-pro-m5-13-1tb-nt-spb_7647662_1.jpg","preOrder":false},{"name":"iPad Pro 12.9-inch (4th generation)","year":2020,"category":"pro","photo":"https://image.vandenborre.be/WEB/images/products/superzoom/apple_ipad-pro-m5-13-1tb-nt-spb_7647662_1.jpg","preOrder":false},{"name":"iPad Pro 12.9-inch (3rd generation)","year":2018,"category":"pro","photo":"https://image.vandenborre.be/WEB/images/products/superzoom/apple_ipad-pro-m5-13-1tb-nt-spb_7647662_1.jpg","preOrder":false},{"name":"iPad Pro 12.9-inch (2nd generation)","year":2017,"category":"pro","photo":"https://image.vandenborre.be/WEB/images/products/superzoom/apple_ipad-pro-m5-13-1tb-nt-spb_7647662_1.jpg","preOrder":false},{"name":"iPad Pro 12.9-inch (1st generation)","year":2015,"category":"pro","photo":"https://image.vandenborre.be/WEB/images/products/superzoom/apple_ipad-pro-m5-13-1tb-nt-spb_7647662_1.jpg","preOrder":false},{"name":"iPad Pro 11-inch (M4)","year":2024,"category":"pro","photo":"https://image.vandenborre.be/WEB/images/products/superzoom/apple_ipad-pro-m5-13-1tb-nt-spb_7647662_1.jpg","preOrder":false},{"name":"iPad Pro 11-inch (4th generation)","year":2022,"category":"pro","photo":"https://image.vandenborre.be/WEB/images/products/superzoom/apple_ipad-pro-m5-13-1tb-nt-spb_7647662_1.jpg","preOrder":false},{"name":"iPad Pro 11-inch (3rd generation)","year":2021,"category":"pro","photo":"https://image.vandenborre.be/WEB/images/products/superzoom/apple_ipad-pro-m5-13-1tb-nt-spb_7647662_1.jpg","preOrder":false},{"name":"iPad Pro 11-inch (2nd generation)","year":2020,"category":"pro","photo":"https://image.vandenborre.be/WEB/images/products/superzoom/apple_ipad-pro-m5-13-1tb-nt-spb_7647662_1.jpg","preOrder":false},{"name":"iPad Pro 11-inch (1st generation)","year":2018,"category":"pro","photo":"https://image.vandenborre.be/WEB/images/products/superzoom/apple_ipad-pro-m5-13-1tb-nt-spb_7647662_1.jpg","preOrder":false},{"name":"iPad Pro 10.5-inch","year":2017,"category":"pro","photo":"https://image.vandenborre.be/WEB/images/products/superzoom/apple_ipad-pro-m5-13-1tb-nt-spb_7647662_1.jpg","preOrder":false},{"name":"iPad Pro 9.7-inch","year":2016,"category":"pro","photo":"https://image.vandenborre.be/WEB/images/products/superzoom/apple_ipad-pro-m5-13-1tb-nt-spb_7647662_1.jpg","preOrder":false},{"name":"iPad Air 13-inch (M3)","year":2025,"category":"air","photo":"https://fdn2.gsmarena.com/vv/pics/apple/apple-ipad-air-11-2024-2.jpg","preOrder":false},{"name":"iPad Air 11-inch (M3)","year":2025,"category":"air","photo":"https://fdn2.gsmarena.com/vv/pics/apple/apple-ipad-air-11-2024-2.jpg","preOrder":false},{"name":"iPad Air 13-inch (M2)","year":2024,"category":"air","photo":"https://fdn2.gsmarena.com/vv/pics/apple/apple-ipad-air-11-2024-2.jpg","preOrder":false},{"name":"iPad Air 11-inch (M2)","year":2024,"category":"air","photo":"https://fdn2.gsmarena.com/vv/pics/apple/apple-ipad-air-11-2024-2.jpg","preOrder":false},{"name":"iPad Air (5th generation)","year":2022,"category":"air","photo":"https://fdn2.gsmarena.com/vv/pics/apple/apple-ipad-air-11-2024-2.jpg","preOrder":false},{"name":"iPad Air (4th generation)","year":2020,"category":"air","photo":"https://fdn2.gsmarena.com/vv/pics/apple/apple-ipad-air-11-2024-2.jpg","preOrder":false},{"name":"iPad Air (3rd generation)","year":2019,"category":"air","photo":"https://fdn2.gsmarena.com/vv/pics/apple/apple-ipad-air-11-2024-2.jpg","preOrder":false},{"name":"iPad Air 2","year":2014,"category":"air","photo":"https://fdn2.gsmarena.com/vv/pics/apple/apple-ipad-air-11-2024-2.jpg","preOrder":false},{"name":"iPad Air (1st generation)","year":2013,"category":"air","photo":"https://fdn2.gsmarena.com/vv/pics/apple/apple-ipad-air-11-2024-2.jpg","preOrder":false},{"name":"iPad (10th generation)","year":2022,"category":"standard","photo":"https://cdn.shopify.com/s/files/1/0552/0883/7292/files/Ipad-11-a16-2.jpg?v=1742991204&width=600","preOrder":false},{"name":"iPad (9th generation)","year":2021,"category":"standard","photo":"https://cdn.shopify.com/s/files/1/0552/0883/7292/files/Ipad-11-a16-2.jpg?v=1742991204&width=600","preOrder":false},{"name":"iPad (8th generation)","year":2020,"category":"standard","photo":"https://cdn.shopify.com/s/files/1/0552/0883/7292/files/Ipad-11-a16-2.jpg?v=1742991204&width=600","preOrder":false},{"name":"iPad (7th generation)","year":2019,"category":"standard","photo":"https://cdn.shopify.com/s/files/1/0552/0883/7292/files/Ipad-11-a16-2.jpg?v=1742991204&width=600","preOrder":false},{"name":"iPad (6th generation)","year":2018,"category":"standard","photo":"https://cdn.shopify.com/s/files/1/0552/0883/7292/files/Ipad-11-a16-2.jpg?v=1742991204&width=600","preOrder":false},{"name":"iPad (5th generation)","year":2017,"category":"standard","photo":"https://cdn.shopify.com/s/files/1/0552/0883/7292/files/Ipad-11-a16-2.jpg?v=1742991204&width=600","preOrder":false},{"name":"iPad (4th generation)","year":2012,"category":"standard","photo":"https://cdn.shopify.com/s/files/1/0552/0883/7292/files/Ipad-11-a16-2.jpg?v=1742991204&width=600","preOrder":false},{"name":"iPad (3rd generation)","year":2012,"category":"standard","photo":"https://cdn.shopify.com/s/files/1/0552/0883/7292/files/Ipad-11-a16-2.jpg?v=1742991204&width=600","preOrder":false},{"name":"iPad 2","year":2011,"category":"standard","photo":"https://cdn.shopify.com/s/files/1/0552/0883/7292/files/Ipad-11-a16-2.jpg?v=1742991204&width=600","preOrder":false},{"name":"Original iPad","year":2010,"category":"standard","photo":"https://cdn.shopify.com/s/files/1/0552/0883/7292/files/Ipad-11-a16-2.jpg?v=1742991204&width=600","preOrder":false},{"name":"iPad mini (A17 Pro)","year":2024,"category":"mini","photo":"https://fdn2.gsmarena.com/vv/pics/apple/ipad-mini-a20-pro-1.jpg","preOrder":false},{"name":"iPad mini (6th generation)","year":2021,"category":"mini","photo":"https://fdn2.gsmarena.com/vv/pics/apple/ipad-mini-a20-pro-1.jpg","preOrder":false},{"name":"iPad mini (5th generation)","year":2019,"category":"mini","photo":"https://fdn2.gsmarena.com/vv/pics/apple/ipad-mini-a20-pro-1.jpg","preOrder":false},{"name":"iPad mini 4","year":2015,"category":"mini","photo":"https://fdn2.gsmarena.com/vv/pics/apple/ipad-mini-a20-pro-1.jpg","preOrder":false},{"name":"iPad mini 3","year":2014,"category":"mini","photo":"https://fdn2.gsmarena.com/vv/pics/apple/ipad-mini-a20-pro-1.jpg","preOrder":false},{"name":"iPad mini 2","year":2013,"category":"mini","photo":"https://fdn2.gsmarena.com/vv/pics/apple/ipad-mini-a20-pro-1.jpg","preOrder":false},{"name":"iPad mini (1st generation)","year":2012,"category":"mini","photo":"https://fdn2.gsmarena.com/vv/pics/apple/ipad-mini-a20-pro-1.jpg","preOrder":false}];
+        let selectedCategory = 'all';
+
+        function escapeHTML(value) {
+            return String(value).replace(/[&<>"']/g, character => ({
+                '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;'
+            }[character]));
+        }
+
+        function renderProducts() {
+            const productList = document.getElementById('productList');
+            productList.innerHTML = ipadModels.map(model => {
+                const safeName = escapeHTML(model.name);
+                const badgeClass = model.preOrder ? 'product-badge preorder' : 'product-badge';
+                const badgeText = model.preOrder ? 'Pre-Order • Launch Nov 6, 2026' : `${model.year} Model`;
+                const description = model.preOrder
+                    ? 'New model • Pre-order listing'
+                    : `Apple iPad • Introduced ${model.year}`;
+                const safePhoto = escapeHTML(model.photo);
+
+                return `
+                    <div class="col-lg-3 col-md-6 product"
+                         data-category="${model.category}"
+                         data-year="${model.year}"
+                         data-name="${safeName.toLowerCase()}">
+                        <div class="product-card">
+                            <span class="${badgeClass}">${badgeText}</span>
+                            <div class="product-image">
+                                <img src="${safePhoto}"
+                                     alt="${safeName} product photo"
+                                     loading="lazy"
+                                     referrerpolicy="no-referrer"
+                                     onerror="usePhotoFallback(this, '${model.category}')">
+                            </div>
+                            <h3>${safeName}</h3>
+                            <p>${description}</p>
+                            <div class="price">Price on Request</div>
+                            <div class="card-buttons">
+                                <button class="add-btn" type="button" data-add="${safeName}">ADD TO CART +</button>
+                                <button class="details-btn" type="button" data-details="${safeName}">VIEW DETAILS</button>
+                            </div>
+                        </div>
+                    </div>`;
+            }).join('');
+
+            productList.querySelectorAll('[data-add]').forEach(button => {
+                button.addEventListener('click', () => addToCart(button.dataset.add));
+            });
+            productList.querySelectorAll('[data-details]').forEach(button => {
+                button.addEventListener('click', () => viewDetails(button.dataset.details));
+            });
+            applyFilters();
+        }
+
+        const photoFallbacks = {"pro":"https://image.vandenborre.be/WEB/images/products/superzoom/apple_ipad-pro-m5-13-1tb-nt-spb_7647662_1.jpg","air13":"https://fdn2.gsmarena.com/vv/pics/apple/apple-ipad-air-11-2024-2.jpg","air11":"https://fdn2.gsmarena.com/vv/pics/apple/apple-ipad-air-11-2024-2.jpg","standard":"https://cdn.shopify.com/s/files/1/0552/0883/7292/files/Ipad-11-a16-2.jpg?v=1742991204&width=600","mini":"https://fdn2.gsmarena.com/vv/pics/apple/ipad-mini-a20-pro-1.jpg"};
+        function usePhotoFallback(img, category) {
+            if (img.dataset.fallbackUsed === 'yes') {
+                img.onerror = null;
+                img.alt = 'iPad product image unavailable. Check your internet connection.';
+                img.style.opacity = '0.35';
+                return;
+            }
+            img.dataset.fallbackUsed = 'yes';
+            img.onerror = null;
+            const fallback = category === 'air' ? photoFallbacks.air13 : photoFallbacks[category];
+            if (img.src !== fallback) {
+                img.src = fallback;
+            }
+        }
+
+        function filterCategory(category, element) {
+            selectedCategory = category;
+            document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+            element.classList.add('active');
+            applyFilters();
+        }
+
+        function applyFilters() {
+            const searchValue = document.getElementById('searchInput').value.toLowerCase().trim();
+            const yearValue = document.getElementById('yearSelect').value;
+            const products = document.querySelectorAll('.product');
+            let visibleCount = 0;
+            products.forEach(product => {
+                const categoryMatch = selectedCategory === 'all' || product.dataset.category === selectedCategory;
+                const yearMatch = yearValue === 'all' || product.dataset.year === yearValue;
+                const searchMatch = product.dataset.name.includes(searchValue);
+                if (categoryMatch && yearMatch && searchMatch) {
+                    product.style.display = 'block';
+                    visibleCount++;
+                } else {
+                    product.style.display = 'none';
+                }
+            });
+            document.getElementById('resultCount').textContent = `Showing ${visibleCount} of ${ipadModels.length} iPad model(s)`;
+            document.getElementById('noResults').style.display = visibleCount === 0 ? 'block' : 'none';
+        }
+
+        document.getElementById('searchInput').addEventListener('input', applyFilters);
+
+        function updateCartCounter() {
+            let cart = [];
+            try { cart = JSON.parse(localStorage.getItem('cartItems')) || []; }
+            catch (error) { cart = []; }
+            document.getElementById('cartCount').textContent = cart.length;
+        }
+
+        function addToCart(itemName) {
+            let cart = [];
+            try { cart = JSON.parse(localStorage.getItem('cartItems')) || []; }
+            catch (error) { cart = []; }
+            cart.push(itemName);
+            localStorage.setItem('cartItems', JSON.stringify(cart));
+            updateCartCounter();
+            alert(`${itemName} added to your cart!`);
+        }
+
+        function viewDetails(itemName) {
+            alert(`Showing detailed specifications for ${itemName}. Connect a product-details page or database to show full live details.`);
+        }
+
+        renderProducts();
+        updateCartCounter();
+    </script>
+
+
+</body></html>
